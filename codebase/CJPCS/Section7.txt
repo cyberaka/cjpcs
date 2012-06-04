@@ -1,0 +1,195 @@
+Q. What line of code would begin execution of a thread named myThread?
+
+ANSWER: myThread.start();
+
+
+Q. Which methods are required to implement the interface Runnable.
+
+A. wait()
+B. run()
+C. stop()
+D. update()
+E. resume()
+
+ANSWER: B
+
+
+Q. What class defines the wait() method?
+
+ANSWER: Object
+
+
+Q. For what reasons might a thread stop execution?
+
+A. A thread with higher priority began execution.
+B. The thread's wait() method was invoked.
+C. The thread invoked its yield() method.
+D. The thread's pause() method was invoked.
+E. The thread's sleep() method was invoked.
+
+ANSWER: A,B,C,E
+
+
+Q. What will happen when you attempt to compile and run the following code?. 
+
+class Background implements Runnable{ 
+  int i=0; 
+  public int run(){ 
+         while(true){ 
+                i++; 
+                System.out.println("i="+i); 
+            } //End while
+     }//End run 
+}//End class
+
+A. It will compile and the run method will print out the increasing value of i.
+B. It will compile and calling start will print out the increasing value of i. 
+C. The code will cause an error at compile time. 
+D. Compilation will cause an error because while cannot take a parameter of true. 
+
+ANSWER: C
+
+
+Q. Which of the following statements are true ?
+
+select all valid answers.
+
+A. No two methods can ever simultaneously execute synchronized methods on the same object.
+B. Methods declared synchronized should not be recursive, since the object's monitor will not allow simultaneous invocations of the method.
+C. Synchronized methods can only call other synchronized methods directly.
+D. Inside a synchronzied method, one can assume that no other threads are currently executing a method in the same class.
+
+ANSWER: A
+
+
+Q. When extending the Thread class to provide a thread's behavior, which methods should be overridden ?
+
+Select all valid answers.
+
+A. begin()
+B. start()
+C. run()
+D. resume()
+E. behavior()
+
+ANSWER: C
+
+
+Q. Which of the following statements are true ?
+
+Select all valid answers.
+
+A. The class Thread is abstract.
+B. The class Thread implements Runnable.
+C. Classes implementing the Runnable interface must define a method called start();
+D. Calling the method run() on an object implementing Runnable will produce a new thread.
+E. Programs terminate when the last non-daemon thread ends.
+
+ANSWER: B,E
+
+Q. Which of the following is the correct way to start a new thread?
+
+Select the one right answer.
+
+A. Just create a new thread. The thread will start automatically.
+B. Create a new thread and call the method begin() on the thread.
+C. Create a new thread and call the method start() on the thread.
+D. Create a new thread and call the method run() on the thread.
+E. Create a new thread and call the method resume() on the thread.
+
+ANSWER: C
+
+
+Q. What will happen when you attempt to compile and run the following code?
+
+public class Bground extends Thread{
+
+public static void main(String argv[]){
+	        Bground b = new Bground();
+        	b.run();
+        }
+        public void start(){
+        	for (int i = 0; i <10; i++){
+                	System.out.println("Value of i = " + i);
+                }
+        }
+
+}
+
+A. A compile time error indicating that no run method is defined for the Thread class
+B. A run time error indicating that no run method is defined for the Thread class
+C. Clean compile and at run time the values 0 to 9 are printed out
+D. Clean compile but no output at runtime
+
+ANSWER: D
+
+
+Q. What can cause a thread to stop executing?
+
+A. The program exits via a call to exit(0);
+B. The priority of another thread is increased
+C. A call to the stop method of the Thread class
+D. A call to the halt method of the Thread class
+
+
+ANSWER: A,B,C
+
+
+Q. Under what circumstances might you use the yield method of the Thread class
+
+A. To call from the currently running thread to allow another thread of the same priority to run
+B. To call on a waiting thread to allow it to run
+C. To allow a thread of higher priority to run
+D. To call from the currently running thread with a parameter designating which thread should be allowed to run
+
+ANSWER: A
+
+
+Q. Which of the following statements about threading are true
+
+A. You can only obtain a mutually exclusive lock on methods in a class that extends Thread or implements runnable
+B. You can obtain a mutually exclusive lock on any object
+C. A thread can obtain a mutex lock on a method declared with the keyword synchronized
+D. Thread scheduling algorithms are platform dependent
+
+ANSWER: B,C,D
+
+
+Q. Which of the following are methods of the Thread class?
+
+A. yield()
+B. sleep(long msec)
+C. go()
+D. stop()
+
+ANSWER: A,B,D
+
+
+
+
+Q. What will happen if you compile/run this code?
+
+1:     public class Q1 extends Thread
+2:     {
+3:         public void run()
+4:         {
+5:            System.out.println("Before start method");
+6:            this.stop();        
+7:            System.out.println("After stop method");
+8:        }
+9:        
+10:        public static void main(String[] args)
+11:        {
+12:            Q1 a = new Q1();
+13:            a.start();
+14:        }
+15:    }
+
+A. Compilation error at line 7.
+B. Runtime exception at line 7.
+C. Prints "Before start method" and "After stop method".
+D. Prints "Before start method" only.
+
+ANSWER: D
+
+

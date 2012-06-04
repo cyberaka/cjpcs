@@ -1,0 +1,529 @@
+Q. Consider the following code sample:
+
+class Tree{}
+class Pine extends Tree{}
+class Oak extends Tree{}
+public class Forest 
+{  public static void main( String[] args ) 
+   {  Tree tree = new Pine();
+
+      if( tree instanceof Pine )
+      System.out.println( "Pine" );
+
+      if( tree instanceof Tree )
+      System.out.println( "Tree" );
+
+      if( tree instanceof Oak )
+      System.out.println( "Oak" );
+
+      else System.out.println( "Oops" );
+   }
+}
+
+Select all choices that will be printed:
+
+A. Pine
+B. Tree
+C. Forest
+D. Oops
+E. (nothing printeD.
+
+ANSWER: A,B,D
+
+
+Q. Consider the classes defined below:
+
+import java.io.*;
+class Super 
+{
+	int methodOne( int a, long b ) throws IOException 
+	{ // code that performs some calculations
+    }
+	float methodTwo( char a, int b )
+	{ // code that performs other calculations
+    }
+}
+public class Sub extends Super
+{
+
+}
+Which of the following are legal method declarations to add to the class Sub? Assume that each method is the only one being added.
+
+A. public static void main( String args[] ){}
+B. float methodTwo(){}
+C. long methodOne( int c, long d ){}
+D. int methodOne( int c, long d ) throws ArithmeticException{}
+E. int methodOne( int c, long d ) throws FileNotFoundException{}
+
+ANSWER: A,B,E
+
+
+Q. Assume that Sub1 and Sub2 are both subclasses of class Super.
+
+Given the declarations:
+
+Super super = new Super();
+Sub1 sub1 = new Sub1();
+Sub2 sub2 = new Sub2(); 
+
+Which statement best describes the result of attempting to compile and execute the following statement:
+
+super = sub1;
+
+A. Compiles and definitely legal at runtime
+B. Does not compile
+C. Compiles and may be illegal at runtime
+
+ANSWER: A
+
+
+Q. For the following code:
+
+class Super 
+{  int index = 5;
+   public void printVal() 
+      {  System.out.println( "Super" );
+      }
+}
+class Sub extends Super
+{  int index = 2;
+   public void printVal() 
+   {  System.out.println( "Sub" );
+   }
+}
+public class Runner 
+{  public static void main( String argv[] ) 
+   {  Super sup = new Sub();
+      System.out.print( sup.index + "," );
+      sup.printVal();
+   }
+}
+What will be printed to standard output?
+
+A. The code will not compile.
+B. The code compiles and "5, Super" is printed to standard output.
+C. The code compiles and "5, Sub" is printed to standard output.
+D. The code compiles and "2, Super" is printed to standard output.
+E. The code compiles and "2, Sub" is printed to standard output.
+F. The code compiles, but throws an exception.
+
+ANSWER: C
+
+
+Q. What will happen if you attempt to compile and run the following code? 
+        
+class Base {} 
+class Sub extends Base {} 
+class Sub2 extends Base {}
+public class CEx{
+        public static void main(String argv[]){
+                Base b=new Base();
+                Sub s=(Sub) b;
+                }
+}
+
+A. Compile and run without error 
+B. Compile time Exception 
+C. Runtime Exception 
+
+ANSWER: C
+
+
+Q. Given the following code how could you invoke the Base constructor that will print out the string "base constructor"; 
+
+class Base{
+        Base(int i){
+        System.out.println("base constructor");
+        }
+        Base(){
+        }
+}
+public class Sup extends Base{
+        public static void main(String argv[]){
+             Sup s= new Sup();
+        //One
+        }
+        Sup()
+        {
+            //Two
+        }
+        public void derived()
+        {
+            //Three
+        }
+}
+A. On the line After //One put Base(10); 
+B. On the line After //One put super(10); 
+C. On the line After //Two put super(10); 
+D. On the line After //Three put super(10); 
+
+ANSWER: C
+
+
+Q. What will be the result when you try to compile and run the following code? 
+
+private class Base{
+Base(){
+     int i = 100;     
+     System.out.println(i);
+     }
+}
+public class Pri extends Base{
+static int i = 200;
+public static void main(String argv[]){
+        Pri p = new Pri();
+        System.out.println(i);
+        }
+}
+A. Error at compile time 
+B. 200 
+C. 100 followed by 200 
+D. 100 
+
+ANSWER: A
+
+
+Q. What will happen when you attempt to compile and run the following code 
+class Base{
+private void amethod(int iBase){
+        System.out.println("Base.amethod");
+        }
+}
+
+class Over extends Base{
+
+
+public static void main(String argv[]){
+        Over o = new Over();
+        int iBase=0;
+        o.amethod(iBase);
+        }
+        public void amethod(int iOver){
+                System.out.println("Over.amethod");
+        }
+
+}
+A. Compile time error complaining that Base.amethod is private 
+B. Runtime error complaining that Base.amethod is private 
+C. Output of Base.amethod 
+D. Output of Over.amethod() 
+  
+ANSWER: D
+
+
+Q. For a class defined inside a method, what rule governs access to the variables of the enclosing method?
+
+A. The class can access any variable
+B. The class can only access static variables
+C. The class can only access transient variables
+D. The class can only access final variables
+
+ANSWER: D
+
+
+Q. What will happen when you attempt to compile and run this program
+
+public class Outer{
+public String name = "Outer";
+public static void main(String argv[]){
+        Inner i = new Inner();
+        i.showName();
+    }//End of main
+
+        private class Inner{
+        String name =new String("Inner");
+                void showName(){
+                        System.out.println(name);
+                }
+        }//End of Inner class
+
+}
+
+A. Compile and run with output of "Outer"
+B. Compile and run with output of "Inner"
+C. Compile time error because Inner is declared as private
+D. Compile time error because of the line creating the instance of Inner
+
+ANSWER: D
+
+
+Q. Given the following code
+
+class Base{}
+
+public class MyCast extends Base{
+static boolean b1=false;
+static int i = -1;
+static double d = 10.1;
+
+public static void main(String argv[]){
+        MyCast m = new MyCast();
+        Base b = new Base();
+	//Here
+        }
+}
+
+Which of the following, if inserted at the comment //Here will allow the code to compile and run without error
+
+A. b=m;
+B. m=b;
+C. d =i;
+D. b1 =i;
+
+ANSWER: A,C
+
+
+Q. Your chief Software designer has shown you a sketch of the new Computer parts system she is about to create. At the top of the hierarchy is a Class called Computer and under this are two child classes. One is called LinuxPC and one is called WindowsPC. The main difference between the two is that one runs the Linux operating System and the other runs the Windows System (of course another difference is that one needs constant re-booting and the other runs reliably). Under the WindowsPC are two Sub classes one called Server and one Called Workstation. How might you appraise your designers work?
+
+
+A. Give the goahead for further design using the current scheme
+B. Ask for a re-design of the hierarchy with changing the Operating System to a field rather than Class type
+C. Ask for the option of WindowsPC to be removed as it will soon be obsolete
+D. Change the hierarchy to remove the need for the superfluous Computer Class.
+
+
+ANSWER: B
+
+
+Q. Given the folowing classes which of the following will compile without error?
+
+interface IFace{}
+class CFace implements IFace{}
+class Base{}
+
+public class ObRef extends Base{
+public static void main(String argv[]){
+        ObRef ob = new ObRef();
+        Base b = new Base();
+        Object o1 = new Object();
+        IFace o2 = new CFace();
+        }
+}
+
+A. o1=o2;
+B. b=ob;
+C. ob=b;
+D. o1=b;
+
+ANSWER: A,B,D
+
+
+Q. Given the following code what will be the output?
+
+class ValHold{
+        public int i = 10;
+}
+public class ObParm{
+public static void main(String argv[]){
+        ObParm o = new ObParm();
+        o.amethod();
+        }
+        public void amethod(){
+                int i = 99;
+                ValHold v = new ValHold();
+                v.i=30;
+                another(v,i);
+                System.out.println(v.i);
+
+        }//End of amethod
+
+        public void another(ValHold v, int i){
+                i=0;
+                v.i = 20;
+                ValHold vh = new ValHold();
+                v =  vh;
+                System.out.println(v.i+ " "+i);
+        }//End of another
+}
+A. 10,0, 30
+B. 20,0,30
+C. 20,99,30
+D. 10,0,20
+
+
+ANSWER: D
+
+
+Q. Given the following class definition, which of the following methods could be legally placed after the comment
+
+//Here 
+public class Rid{
+        public void amethod(int i, String s){}
+	//Here
+}
+
+A. public void amethod(String s, int i){}
+B. public int amethod(int i, String s){} 
+C. public void amethod(int i, String mystring){} 
+D. public void Amethod(int i, String s) {}
+
+ANSWER: A,D
+
+
+Q. Given the following class definition which of the following can be legally placed after the comment line
+//Here ?
+
+class Base{
+public Base(int i){}
+}
+
+public class MyOver extends Base{
+public static void main(String arg[]){
+                MyOver m = new MyOver(10);
+                }
+        MyOver(int i){
+                super(i);
+        }
+        MyOver(String s, int i){
+                this(i);
+				 //Here
+               
+        }
+}
+A. MyOver m = new MyOver();
+B. super(); 
+C. this("Hello",10);
+D. Base b = new Base(10);
+
+ANSWER: D
+
+
+Q. Given the following class definition, which of the following statements would be legal after the comment //Here
+
+class InOut{
+String s= new String("Between");
+
+
+        public void amethod(final int iArgs){
+        int iam;
+               class Bicycle{
+                        public void sayHello(){
+						//Here
+                        }//End of bicycle class
+                }
+        }//End of amethod
+       public void another(){
+       int iOther;
+       }
+}
+A. System.out.println(s); 
+B. System.out.println(iOther);
+C. System.out.println(iam);
+D. System.out.println(iArgs);
+
+
+ANSWER: A,D
+
+
+
+
+Q. What will happen if you compile/run the following code?
+
+1:    class Test
+2:    {
+3:  static void show()
+4:  {
+5:      System.out.println("Show method in Test class");
+6:  }
+7:}
+8:
+9:    public class Q2 extends Test
+10:   {
+11: static void show()
+12: {
+13:     System.out.println("Show method in Q2 class");
+14: }
+15: public static void main(String[] args)
+16: {
+17:     Test t = new Test();
+18:     t.show();
+19:     Q2 q = new Q2();
+20:     q.show();
+21:     
+22:     t = q; 
+23:     t.show();
+24:
+25:     q = t; 
+26:     q.show();
+27: }
+28: }
+
+ 
+A. prints "Show method in Test class"
+          "Show method in Q2 class"
+          "Show method in Q2 class"
+          "Show method in Q2 class"
+          
+B. prints "Show method in Test class"
+          "Show method in Q2 class"
+          "Show method in Test class"
+          "Show method in Test class"
+
+C. prints "Show method in Test class"
+          "Show method in Q2 class"
+          "Show method in Test class"
+          "Show method in Q2 class"
+          
+D. Compilation error.
+
+ 
+ANSWER: D
+
+
+Q. The following code will give
+1:    class Test
+2:    {
+3:      void show()
+4:      {
+5:      System.out.println("non-static method in Test");
+6:  }
+7:    }
+8:    public class Q3 extends Test
+9:    {
+10:     static void show()
+11: {
+12:     System.out.println("Overridden non-static method in Q3");
+13: }
+14:            
+15:       public static void main(String[] args)
+16:       {
+17:              Q3 a = new Q3();
+18:        }
+19:    }
+
+A. Compilation error at line 3.
+B. Compilation error at line 10.
+C. No compilation error, but runtime exception at line 3.
+D. No compilation error, but runtime exception at line 10.
+
+ANSWER: B
+
+
+Q. The following code will give
+
+1:    class Test
+2:    {
+3:      static void show()
+4:      {
+5:          System.out.println("Static method in Test");
+6:      }
+7:    }
+8:    public class Q4 extends Test
+9:    {
+10:     void show()
+11: {
+12:     System.out.println("Overridden static method in Q4");
+13: }
+14: public static void main(String[] args)
+15: {
+16: }
+17:    }
+
+A. Compilation error at line 3.
+B. Compilation error at line 10.
+C. No compilation error, but runtime exception at line 3.
+D. No compilation error, but runtime exception at line 10.
+
+ANSWER: B
+
+

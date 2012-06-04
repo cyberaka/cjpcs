@@ -1,0 +1,531 @@
+Q. Which of the following are valid definitions of an application's main( ) method?
+
+A. public static void main();
+B. public static void main( String args );
+C. public static void main( String args[] );
+D. public static void main( Graphics g );
+E. public static boolean main( String args[] );
+
+ANSWER: C
+
+
+Q. Consider the code below: 
+
+arr[0] = new int[4];
+arr[1] = new int[3];
+arr[2] = new int[2];
+arr[3] = new int[1];
+for( int n = 0; n < 4; n++ )
+System.out.println( /* what goes here? */ ); 
+
+Which statement below, when inserted as the body of the for loop, would print the number of values in each row?
+
+A. arr[n].length();
+B. arr.size;
+C. arr.size -1;
+D. arr[n][size];
+E. arr[n].length;
+
+ANSWER: E
+
+
+Q. Which of the following are correct methods for initializing the array "dayhigh" with 7 values?
+
+A. int dayhigh = { 24, 23, 24, 25, 25, 23, 21 };
+B. int dayhigh[] = { 24, 23, 24, 25, 25, 23, 21 };
+C. int[] dayhigh = { 24, 23, 24, 25, 25, 23, 21 };
+D. int dayhigh [] = new int[24, 23, 24, 25, 25, 23, 21];
+E. int dayhigh = new[24, 23, 24, 25, 25, 23, 21];
+
+ANSWER: B,C
+
+
+Q. If you want subclasses to access, but not to override a superclass member method, what keyword should precede the name of the superclass method?
+
+ANSWER: final
+
+
+Q. If you want a member variable to not be accessible outside the current class at all, what keyword should precede the name of the variable when declaring it?
+
+ANSWER: private
+
+
+Q. What will happen if you try to compile and run the following code 
+public class MyClass { 
+        public static void main(String arguments[]) { 
+                amethod(arguments); 
+                } 
+        public void amethod(String[] arguments) { 
+                System.out.println(arguments); 
+                System.out.println(arguments[1]); 
+        } 
+}
+
+A. error Can't make static reference to void amethod. 
+B. error method main not correct 
+C. error array must include parameter 
+D. amethod must be declared with String 
+
+ANSWER: A
+
+
+Q. What will happen when you compile and run the following code? 
+  
+  
+public class MyClass{ 
+        static int i; 
+        public static void main(String argv[]){ 
+                System.out.println(i); 
+                } 
+}
+A. Error Variable i may not have been initialized 
+B. null 
+C. 1 
+D. 0
+
+ANSWER: D
+
+
+Q. What will be the result of attempting to compile and run the following code? 
+
+abstract class MineBase { 
+        abstract void amethod(); 
+        static int i; 
+}
+public class Mine extends MineBase      { 
+        public static void main(String argv[]){ 
+                        int[] ar=new int[5]; 
+                        for(i=0;i < ar.length;i++) 
+                                System.out.println(ar[i]); 
+                        } 
+}
+
+A. a sequence of 5 0's will be printed
+B. Error: ar is used before it is initialized 
+C. Error Mine must be declared abstract 
+D. IndexOutOfBoundes Error 
+
+ANSWER: C
+
+
+Q. Which of the following methods can be legally inserted in place of the comment //Method Here ? 
+
+class Base{ 
+      public void amethod(int i) {  }
+} 
+public class Scope extends Base{
+        public static void main(String argv[]){
+        } 
+    //Method Here
+}
+A. void amethod(int i) throws Exception {} 
+B. void amethod(long i)throws Exception {} 
+C. void amethod(long i){} 
+D. public void amethod(int i) throws Exception {} 
+
+ANSWER: B,C
+
+
+Q. public class MyClass1 {
+public static void main(String argv[]){ } 
+
+/*Modifier at XX */ class MyInner {}
+}
+What modifiers would be legal at XX in the above code? 
+A. public 
+B. private 
+C. static 
+D. friend 
+
+ANSWER: A,B,C
+
+
+Q. What will happen when you compile and run the following code? 
+public class Scope{
+private int i;
+public static void main(String argv[]){
+                Scope s = new Scope();
+            s.amethod();
+        }//End of main
+        public static void amethod(){
+                 System.out.println(i);
+        }//end of amethod
+}//End of class
+A. A value of 0 will be printed out 
+B. Nothing will be printed out 
+C. A compile time error 
+D. A compile time error complaining of the scope of the variable i 
+
+ANSWER: C
+
+
+Q. What will be the result of attempting to compile and run the following code?
+
+public class MyClass {
+	public static void main(String args[]) {
+		Outer objRef = new Outer();
+		System.out.println(objRef.createInner().getSecret());
+	}
+}
+
+class Outer {
+	private int secret;
+	Outer() { secret = 123; }
+
+	class Inner {
+		int getSecret() { return secret; }
+	}
+
+	Inner createInner() { return new Inner(); }
+}
+
+Select the one right answer.
+
+A. The code will fail to compile, since the class Inner cannot be declared withing the class Outer.
+B. The code will fail to compile, since the metod createInner() cannot be allowed to pass objects of the inner class Inner to methods outside ofthe class Outer.
+C. The code will fail to compile, since the secret variable is not accessible from the method getSecret().
+D. The code will fail to compile, since the method getSecret() is not visible from the main() method in the class MyClass.
+E. The code will compile without error and will print 123 when run.
+
+ANSWER: E
+
+
+Q. Which of these statements concerning nested classes are true ?
+
+Select all valid answers.
+
+A. An instance of a top-level class has an inherent outside instance.
+B. A top-level nested class can contain non-static member variables.
+C. A top-level nested interface can contain non-static member variables.
+D. A top-level nested interface has an inherent outer instance.
+E. For each instance of the outer class, there can exist many instances of a non-static inner class.
+
+ANSWER: B,E
+
+
+Q. Which of the following statements are true ?
+
+Select all valid answers.
+
+A. Non-static inner classes must have either default or public accessibility.
+B. All nested classes can contain other top-level nested classes.
+C. Methods in all nested classes can be declared static.
+D. All nested classes can be declared static.
+E. Top-level nested classes can contain non-static methods.
+
+ANSWER: E
+
+
+Q. Which of the following lines will compile without warning or error. 
+
+A. float f=1.3; 
+B. char c="a"; 
+C. byte b=257; 
+D. boolean b=null; 
+E. int i=10; 
+
+ANSWER: E
+
+Q. What will happen when you attempt to compile and run this code?
+
+abstract class Base{
+        abstract public void myfunc();
+        public void another(){
+        System.out.println("Another method");
+        }
+}
+public class Abs extends Base{
+        public static void main(String argv[]){
+        Abs a = new Abs();
+        a.amethod();
+        }
+        public void myfunc(){
+                System.out.println("My func");
+                } 
+        public void amethod(){
+        myfunc();
+        
+        }
+}
+
+A. The code will compile and run, printing out the words "My Func"
+B. The compiler will complain that the Base class has non abstract methods
+C. The code will compile but complain at run time that the Base class has non abstract methods
+D. The compiler will complain that the method myfunc in the base class has no body, nobody at all to looove it
+
+ANSWER: A
+
+
+Q. What will happen when you attempt to compile and run this code?
+
+class Base{
+        abstract public void myfunc();
+        public void another(){
+        System.out.println("Another method");
+        }
+}
+public class Abs extends Base{
+        public static void main(String argv[]){
+        Abs a = new Abs();
+        a.amethod();
+        }
+        public void myfunc(){
+                System.out.println("My func");
+                } 
+        public void amethod(){
+        myfunc();
+        
+        }
+}
+A. The code will compile and run, printing out the words "My Func"
+B. The compiler will complain that the Base class is not declared as abstract.
+C. The code will compile but complain at run time that the Base class has non abstract methods
+D. The compiler will complain that the method myfunc in the base class has no body, nobody at all to looove it
+
+ANSWER: B
+
+
+Q. Why might you define a method as native?
+
+A. To get to access hardware that Java does not know about
+B. To define a new data type such as an unsigned integer
+C. To write optimised code for performance in a language such as C/C++
+D. To overcome the limitation of the private scope of a method
+
+ANSWER: A,C
+
+
+Q. What will happen when you attempt to compile and run this code?
+
+
+class Base{
+public final void amethod(){
+        System.out.println("amethod");
+        }
+}
+public class Fin extends Base{
+public static void main(String argv[]){
+        Base b = new Base();
+        b.amethod();
+        }
+}
+
+A. Compile time error indicating that a class with any final methods must be declared final itself
+B. Compile time error indicating that you cannot inherit from a class with final methods
+C. Run time error indicating that Base is not defined as final
+D. Success in compilation and output of "amethod" at run time.
+
+ANSWER: D
+
+
+Q. What will happen when you attempt to compile and run this code?
+
+public class Mod{
+public static void main(String argv[]){
+    }
+        public static native void amethod();
+}
+
+A. Error at compilation: native method cannot be static
+B. Error at compilation native method must return value
+C. Compilation but error at run time unless you have made code containing native amethod available
+D. Compilation and execution without error
+
+ANSWER: D
+
+
+Q. What will happen when you attempt to compile and run this code?
+
+private class Base{}
+public class Vis{
+	transient int  iVal;
+	public static void main(String elephant[]){
+        }
+}
+
+A.Compile time error: Base cannot be private
+B.Compile time error indicating that an integer cannot be transient
+C.Compile time error transient not a data type
+D.Compile time error malformed main method
+
+ANSWER: A
+
+
+Q. What will happen when you attempt to compile and run the following code
+
+public class Hope{
+public static void main(String argv[]){
+ Hope h = new Hope();
+ }
+protected Hope(){
+ for(int i =0; i <10; i ++){
+  System.out.println(i);
+  }
+ }
+}
+
+A. Compilation error: Constructors cannot be declared protected
+B. Run time error: Constructors cannot be declared protected
+C. Compilation and running with output 0 to 10
+D. Compilation and running with output 0 to 9
+
+ANSWER: D
+
+
+Q. Which of the following statements are true
+
+A. An inner class may be defined as static
+B. An inner class may NOT be define as private
+C. An anonymous class may have only one constructor
+D. An inner class may extend another class
+
+ANSWER: A,D
+
+
+Q. 
+1:    public class Q8
+2:    {
+3:        int i = 20;
+4:        static 
+5:        {
+6:            int i = 10;
+7:            
+8:        }
+9:        public static void main(String[] args)
+10:        {
+11:             Q8 a = new Q8();
+12:             System.out.println(a.i);
+13:        }
+14:    }        
+
+A. Compilation error, variable "i" declared twice.
+B. Compilation error, static initializers for initialization purpose only.
+C. Prints 10.
+D. Prints 20.
+
+ANSWER: D
+
+
+Q. What will happen if you compile/run the following code?
+
+1:    public class Q11
+2:    {
+3:        static String str1 = "main method with String[] args";
+4:        static String str2 = "main method with int[] args";
+5:
+6:        public static void main(String[] args)
+7:        {
+8:            System.out.println(str1);
+9:        }
+10:        
+11:       public static void main(int[] args)
+12:       {
+13:           System.out.println(str2);
+14:       }        
+15:    }
+
+A. Duplicate method main(), compilation error at line 6.
+B. Duplicate method main(), compilation error at line 11.
+C. Prints "main method with main String[] args".
+D. Prints "main method with main int[] args".
+
+
+ANSWER: C
+
+
+Q. What is the output of the following code?
+
+1:    class Test
+2:    {
+3:        Test(int i)
+4:        {
+5:            System.out.println("Test(" +i +")");
+6:        }
+7:    }
+8:
+9:    public class Q12
+10:   {
+11:        static Test  t1 = new Test(1);
+12:
+13:        Test         t2 = new Test(2);
+14:
+15:        static Test  t3 = new Test(3);
+16:
+17:        public static void main(String[] args)
+18:        {    
+19:            Q12 Q = new Q12();
+20:        }
+21:    }    
+
+ 
+A. Test(1)
+   Test(2)
+   Test(3)
+B. Test(3)
+   Test(2)
+   Test(1)
+C. Test(2)
+   Test(1) 
+   Test(3)
+D. Test(1)
+   Test(3) 
+   Test(2)
+ 
+      
+ANSWER: D
+
+
+Q. What will happen if you compile/run the following code?
+    
+1:	public class Q21
+2:   {
+3:      int maxElements;
+4:   
+5:      void Q21()
+6:      {
+7:          maxElements = 100;
+8:          System.out.println(maxElements);
+9:      }
+10:    
+11:     Q21(int i)
+12:     {
+13:          maxElements = i;
+14:          System.out.println(maxElements);
+15:     }
+16:
+17:     public static void main(String[] args)
+18:     {
+19:          Q21 a = new Q21();
+20:          Q21 b = new Q21(999);
+21:      }
+22:  }
+
+A. Prints 100 and 999.
+B. Prints 999 and 100.
+C. Compilation error at line 3, variable maxElements was not initialized.
+D. Compillation error at line 19.
+
+ANSWER: D
+
+
+Q. Which of the following are valid array declarations/definitions?
+
+1:  int iArray1[10];
+2:  int iArray2[];
+3:  int iArray3[]   = new int[10];
+4:  int iArray4[10] = new int[10];
+5:  int []iArray5   = new int[10];
+6:  int iArray6[]   = new int[]; 
+7:  int iArray7[]   = null; 
+
+A. 1.
+B. 2.
+C. 3.
+D. 4.
+E. 5.
+F. 6.
+G. 7. 
+
+ANSWER: B,C,E,G
+
+

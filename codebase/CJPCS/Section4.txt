@@ -1,0 +1,736 @@
+Q. Which of the following are Java keywords?
+
+A. array
+B. boolean
+C. Integer
+D. protect
+E. super
+
+ANSWER: B,E
+
+
+Q. After the declaration: 
+
+char[] c = new char[100]; 
+
+what is the value of c[50]?
+
+A. 50
+B. 49
+C. '\u0000'
+D. '\u0020'
+E. " "
+F. cannot be determined
+G. always null until a value is assigned
+
+ANSWER: C
+
+
+Q. After the declaration: 
+
+int x; 
+
+the range of x is:
+
+A. -2^(31) to 2^(31-1) 
+B. -2^(16) to 2^(16-1) 
+C. -2^(32) to 2^(32) 
+D. -2^(16) to 2^(16)
+E. cannot be determined; it depends on the machine
+
+ANSWER: A
+
+
+Q. Which identifiers are valid?
+
+A. _xpoints
+B. r2d2
+C. bBb$
+D. set-flow
+E. thisisCrazy
+
+ANSWER: A,B,C,E
+
+
+Q. Represent the number 6 as a hexadecimal literal.
+
+ANSWER: 0x6,0X6,0x06,0X06
+
+
+Q. Which of the following statements assigns "Hello Java" to the String variable s?
+
+A. String s = "Hello Java";
+B. String s[] = "Hello Java";
+C. new String s = "Hello Java";
+D. String s = new String("Hello Java");
+
+ANSWER: A,D
+
+
+Q. An integer, x has a binary value (using 1 bytE. of 10011100. What is the binary value of z after these statements: 
+
+int y = 1 << 7;
+int z = x & y; 
+
+
+A. 1000 0001
+B. 1000 0000
+C. 0000 0001
+D. 1001 1101
+E. 1001 1100
+
+ANSWER: B
+
+
+Q. Which statements are accurate:
+
+A. >> performs signed shift while >>> performs an unsigned shift.
+B. >>> performs a signed shift while >> performs an unsigned shift.
+C. << performs a signed shift while <<< performs an insigned shift.
+D. <<< performs a signed shift while << performs an unsigned shift.
+
+ANSWER: A
+
+
+Q. To declare an array of 31 floating point numbers representing snowfall for each day of March in Gnome, Alaska, which declarations would be valid?
+
+A. double snow[] = new double[31];
+B. double snow[31] = new array[31];
+C. double snow[31] = new array;
+D. double[] snow = new double[31];
+
+ANSWER: A,D
+
+
+Q. If MyProg.java were compiled as an application and then run from the command line as: 
+
+              java MyProg I like tests
+what would be the value of args[ 1 ] inside the main( ) method?
+
+A. MyProg
+B. "I"
+C. "like"
+D. 3
+E. 4
+F. null until a value is assigned
+
+ANSWER: C
+
+
+Q. Which of the following are legal declarations of a two-dimensional array of integers?
+
+A. int[5][5]a = new int[][];
+B. int a = new int[5,5]; 
+C. int[]a[] = new int[5][5];
+D. int[][]a = new[5]int[5];
+
+ANSWER: C
+
+
+Q. Which of the following lines will compile without warning or error. 
+
+A. float f=1.3; 
+B. char c="a"; 
+C. byte b=257; 
+D. boolean b=null; 
+E. int i=10; 
+
+ANSWER: E
+
+
+Q. Which of the following will compile without error 
+
+A.
+import java.awt.*; 
+package Mypackage; 
+class Myclass {}
+
+B. 
+package MyPackage; 
+import java.awt.*; 
+class MyClass{}
+
+C. 
+/*This is a comment */ 
+package MyPackage; 
+import java.awt.*; 
+class MyClass{}
+  
+ANSWER: B,C
+
+
+Q. A byte can be of what size 
+
+A. -128 to 127
+B. (-2 power 8 )-1 to 2 power 8 
+C. -255 to 256 
+D.depends on the particular implementation of the Java Virtual machine 
+
+ANSWER: A
+
+
+Q. What will be printed out if this code is run with the following command line? 
+java myprog good morning
+public class myprog{ 
+public static void main(String argv[])
+{ 
+System.out.println(argv[2]) 
+}
+}
+
+A. myprog 
+B. good 
+C. morning 
+D. Exception raised: "java.lang.ArrayIndexOutOfBoundsException: 2" 
+  
+ANSWER:  D
+
+
+Q. Which of the following are Java keywords? 
+
+A. if 
+B. then 
+C. goto 
+D. while 
+E. case 
+
+ANSWER: A,C,D,E
+
+
+Q. Which of the following are legal identifiers 
+
+A. 2variable 
+B. variable2 
+C. _whatavariable 
+D. _3_ 
+E. $anothervar 
+F. #myvar 
+
+ANSWER: B,C,D,E
+
+
+
+Q. What will happen if you try to compile and run the following code? 
+public class Q { 
+        public static void main(String argv[]){ 
+                int anar[]=new int[]{1,2,3};
+                System.out.println(anar[1]); 
+                } 
+}
+
+A. 1 
+B. Error anar is referenced before it is initialized 
+C. 2 
+D. Error: size of array must be defined 
+  
+ANSWER: C
+
+
+Q. What will happen if you try to compile and run the following code? 
+
+public class Q { 
+        public static void main(String argv[]){ 
+                int anar[]=new int[5];
+                System.out.println(anar[0]); 
+                } 
+}
+
+A. Error: anar is referenced before it is initialized
+B. null 
+C. 0 
+D. 5 
+
+ANSWER: C
+
+
+Q. What tags are mandatory when creating HTML to display an applet 
+A. name, height, width 
+B. code, name 
+C. codebase, height, width 
+D. code, height, width 
+
+ANSWER: D
+
+
+Q. If the following HTML code is used to display the applet in the code MgAp what will 
+be displayed at the console? 
+  
+<applet name=MgAp code=MgAp.class height=400 width=400 parameter HowOld=30 > 
+</applet> 
+
+import java.applet.*; 
+import java.awt.*; 
+public class MgAp extends Applet{
+        public void init(){ 
+                System.out.println(getParameter("age")); 
+                } 
+}
+
+A. Error: no such parameter
+B. 0 
+C. null 
+D. 30 
+
+ANSWER: C
+
+
+Q. What will happen if you attempt to compile and run the following code? 
+
+Integer ten=new Integer(10); 
+Long nine=new Long (9);
+System.out.println(ten + nine); 
+int i=1;
+System.out.println(i + ten);
+A. 19 followed by 20 
+B. 19 followed by 11 
+C. Error: Can't convert java lang Integer 
+D. 10 followed by 1 
+
+ANSWER: C
+
+
+Q. What is the result of the following operation? 
+System.out.println(4 | 3); 
+
+A. 6 
+B. 0 
+C. 1 
+D. 7 
+
+ANSWER: D
+
+
+Q. What will the following code print out? 
+public class Oct{
+public static void main(String argv[]){
+        Oct o = new Oct();
+        o.amethod();
+        }
+        public void amethod(){
+        int oi= 012;
+        System.out.println(oi);
+        }
+}
+A. 12 
+B. 012 
+C. 10 
+D. 10.0 
+  
+ANSWER: C
+
+
+Q. What will happen when you attempt to compile and run this code?
+
+public class MyMain{
+public static void main(String argv){
+        System.out.println("Hello cruel world");
+        }
+}
+
+A. The compiler will complain that main is a reserved word and cannot be used for a class
+B. The code will compile and when run will print out "Hello cruel world"
+C. The code will compile but will complain at run time that no constructor is defined
+D. The code will compile but will complain at run time that main is not correctly defined
+
+ANSWER: D
+
+
+Q. Which of the following are Java modifiers?
+
+A. public
+B. private
+C. friendly
+D. transient
+E. vagrant
+
+ANSWER: A,B,D
+
+
+Q. What happens when you attempt to compile and run these two files in the same directory?
+
+//File P1.java
+package MyPackage;
+class P1{
+void afancymethod(){
+        System.out.println("What a fancy method");
+        }
+}
+
+//File P2.java
+public class P2 extends P1{
+afancymethod();
+}
+
+A. Both compile and P2 outputs "What a fancy method" when run
+B. Neither will compile
+C. Both compile but P2 has an error at run time
+D. P1 compiles cleanly but P2 has an error at compile time
+
+ANSWER: D
+
+
+Q. You want to find out the value of the last element of an array. You write the following code. What will happen when you compile and run it.?
+
+public class MyAr{
+public static void main(String argv[]){
+        int[] i = new int[5];
+        System.out.println(i[5]);
+        }
+}
+A. An error at compile time
+B. An error at run time
+C. The value 0 will be output
+D. The string "null" will be output
+
+ANSWER: B
+
+
+Q. You want to loop through an array and stop when you come to the last element. Being a good java programmer and forgetting everything you ever knew about C/C++ you know that arrays contain information about their size. Which of the following can you use?
+
+A. myarray.length();
+B. myarray.length;
+C. myarray.size
+D. myarray.size();
+
+ANSWER: B
+
+
+Q. What will happen when you attempt to compile and run the following code
+
+public class As{
+int i = 10;
+int j;
+char z= 1;
+boolean b;
+public static void main(String argv[]){
+                As a = new As();
+                a.amethod();
+        }
+        public void amethod(){
+        System.out.println(j);
+        System.out.println(b);                
+        }
+}
+
+A. Compilation succeeds and at run time an output of 0 and false
+B. Compilation succeeds and at run time an output of 0 and true
+C. Compile time error b is not initialised
+D. Compile time error z must be assigned a char value
+
+ANSWER: A
+
+
+Q. What will happen when you attempt to compile and run the following code with the command line "hello there"
+
+public class Arg{
+String[] MyArg;
+        public static void main(String argv[]){
+        MyArg=argv;
+        }
+        public void amethod(){
+                System.out.println(argv[1]);
+        }
+}
+
+A. Compile time error
+B. Compilation and output of "hello"
+C. Compilation and output of "there"
+D. None of the above
+
+ANSWER: A
+
+
+Q. What will happen when you attempt to compile and run the following code
+
+public class MyAr{
+public static void main(String argv[]) {
+        MyAr m = new MyAr();
+        m.amethod();
+        }
+        public void amethod(){
+        static int i;
+        System.out.println(i);
+        }
+}
+A. Compilation and output of the value 0
+B.Compile time error because i has not been initialized
+C. Compilation and output of null
+D. Compile time error
+
+ANSWER: D
+
+
+Q. Which of the following will compile correctly
+
+A. short myshort = 99S;
+B. String name = 'Excellent tutorial Mr Green';
+C. char c = 17c;
+D.int z = 015;
+
+ANSWER: D
+
+
+Q. Which of the following are Java key words
+A. double
+B. Switch
+C. then
+D. instanceof
+
+ANSWER: A,D
+
+
+Q. Given the following main method in a class called Cycle and a command line of
+
+java Cycle one two
+what will be output?
+
+public static void main(String bicycle[]){
+	System.out.println(bicycle[0]);
+}
+A. None of these options
+B. cycle
+C. one
+D. two
+
+ANSWER: C
+
+
+Q. Given the following variables which of the following lines will compile without error?
+
+String s = "Hello";
+long l = 99;
+double d = 1.11;
+int i = 1;
+int j = 0;
+A. j= i <<s;
+B. j= i<<j;
+C. j=i<<d;
+D.j=i<<l;
+
+ANSWER: B,D
+
+
+Q. Which of the following statements are true?
+
+A. Adding more classes via import statements will cause a performance overhead, only import classes you actually use.
+B. Under no circumstances can a class be defined with the private modifier
+C. A inner class can be defined with the protected modifier
+D. An interface cannot be instantiated
+
+ANSWER: C,D
+
+
+Q. 
+The following code will print
+
+1:    int i = 1;
+2:    i <<= 31;
+3:    i >>= 31;
+4:    i >>= 1;
+5:
+6:    int j = 1;
+7:    j <<= 31;
+8:    j >>= 31;
+9:      
+10:    System.out.println("i = " +i );
+11:    System.out.println("j = " +j);
+
+ 
+A. i = 1
+   j = 1
+
+B. i = -1
+   j = 1
+   
+C. i = 1
+   j = -1
+   
+D. i = -1
+   j = -1
+ 
+ANSWER: D
+
+
+Q. The following code will print
+
+1:    Double a = new Double(Double.NaN);
+2:    Double b = new Double(Double.NaN);
+3:              
+4:    if( Double.NaN == Double.NaN )
+5:  System.out.println("True");
+6:    else
+7:  System.out.println("False");
+8:          
+9:    if( a.equals(b) )
+10: System.out.println("True");
+11:   else
+12: System.out.println("False");
+
+ 
+A. True
+   True
+   
+B. True
+   False
+C. False
+   True
+   
+D. False
+   False
+ 
+   
+ANSWER: C
+
+
+Q. 1:    if( new Boolean("true") == new Boolean("true")) 
+2:        System.out.println("True");
+3:    else
+4:        System.out.println("False"); 
+
+A. Compilation error.
+B. No compilation error, but runtime exception.
+C. Prints "True".
+D. Prints "False".
+
+ANSWER: D
+
+
+Q. The following code will give 
+
+1:     Byte b1 = new Byte("127");
+2:
+3:     if(b1.toString() == b1.toString())
+4:        System.out.println("True");
+5:    else
+6:        System.out.println("False");
+
+A. Compilation error, toString() is not avialable for Byte.
+B. Prints "True".
+C. Prints "False".
+
+ANSWER: C
+
+
+Q. What is the output of the following code?
+
+1:    int i = 16;
+2:    int j = 17;
+3:        
+4:    System.out.println("i >> 1  =  " + (i >> 1));
+5:	System.out.println("j >> 1  =  " + (j >> 1));
+
+ 
+A. Prints  "i >> 1 = 8"
+           "j >> 1 = 8"
+           
+B. Prints  "i >> 1 = 7"
+           "j >> 1 = 7"
+
+C. Prints  "i >> 1 = 8"
+           "j >> 1 = 9"
+
+D. Prints  "i >> 1 = 7"
+           "j >> 1 = 8"
+ 
+ANSWER: A
+
+
+Q. What is the output of the following code?
+
+1:    int i = 45678;
+2:    int j = ~i;
+3:
+4:    System.out.println(j);
+
+ 
+A. Compilation error at line 2. ~ 
+operator applicable to boolean values only.
+B. Prints 45677.
+C. Prints -45677.
+D. Prints -45679.
+ 
+    
+ANSWER: D
+
+
+Q. What will happen if run the following code?
+    
+1:	Boolean[] b1 = new Boolean[10];
+2:
+3:	boolean[] b2 = new boolean[10];
+4:  
+6:	System.out.println("The value of b1[1] = " +b1[1]);
+7:	System.out.println("The value of b2[1] = " +b2[1]);
+
+A. Prints "The value of b1[1] = false"
+          "The value of b2[1] = false".
+               
+B. Prints "The value of b1[1] = null"
+          "The value of b2[1] = null".
+
+C. Prints "The value of b1[1] = null"
+          "The value of b2[1] = false".
+
+D. Prints "The value of b1[1] = false"
+          "The value of b2[1] = null". 
+              
+ANSWER: C
+
+
+Q. What is the output for the following lines of code?
+1:  System.out.println(" " +2 + 3); 
+2:  System.out.println(2 + 3); 
+3:  System.out.println(2 + 3 +"");
+4:  System.out.println(2 + "" +3); 
+
+ 
+A. Compilation error at line 3
+B. Prints 23, 5, 5 and 23.
+C. Prints 5, 5, 5 and 23.
+D. Prints 23, 5, 23 and 23.
+ 
+ANSWER: B
+
+
+Q. The following declaration(as a member variable) is legal.
+        static final transient int maxElements = 100;
+A. True.
+B. False. 
+ 
+ANSWER: A
+
+
+Q. What will happen if you compile/run the following lines of code?
+1:  int[] iArray = new int[10];
+2:
+3:  iArray.length = 15;
+4:
+5:  System.out.println(iArray.length); 
+   
+ 
+A. Prints 10.
+B. Prints 15.
+C. Compilation error, you can't change the length of an array.
+D. Runtime exception at line 3.
+ 
+ANSWER: C
+
+
+Q. What will happen if you compile/run this code?
+1:  int i = 012;
+2:  int j = 034;
+3:  int k = 056;
+4:  int l = 078;
+5:
+6:  System.out.println(i);
+7:  System.out.println(j);
+8:  System.out.println(k);
+ 
+A. Prints 12,34 and 56.
+B. Prints 24,68 and 112.
+C. Prints 10, 28 and 46.
+D. Compilation error.
+ 
+ANSWER: D
+
+

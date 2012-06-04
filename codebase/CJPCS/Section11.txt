@@ -1,0 +1,170 @@
+Q. Choose all valid forms of the argument list for the FileOutputStream constructor shown below:
+
+A. FileOutputStream( FileDescriptor fd )
+B. FileOutputStream( String n, boolean a )
+C. FileOutputStream( boolean a )
+D. FileOutputStream()
+E. FileOutputStream( File f )
+
+ANSWER: A,B,E
+
+
+Q. A "mode" argument such as "r" or "rw" is required in the constructor for the class(es):
+
+A. DataInputStream
+B. InputStream
+C. RandomAccessFile
+D. File
+E. None of the above
+
+ANSWER: C
+
+
+Q. A directory can be created using a method from the class(es):
+
+A. File
+B. DataOutput
+C. Directory
+D. FileDescriptor
+E. FileOutputStream
+
+ANSWER: A
+
+
+Q. If raf is a RandomAccessFile, what is the result of compiling and executing the following code?
+
+raf.seek( raf.length() );
+
+A. The code will not compile.
+B. An IOException will be thrown.
+C. The file pointer will be positioned immediately before the last character of the file.
+D. The file pointer will be positioned immediately after the last character of the file.
+
+ANSWER: D
+
+
+Q. How can you change the current working directory using an instance of the File class called FileName? 
+A. FileName.chdir("DirName") 
+B. FileName.cd("DirName") 
+C. FileName.cwd("DirName") 
+D. The File class does not support directly changing the current directory. 
+
+ANSWER: D
+
+
+Q. Given the following code 
+import java.io.*;
+public class Th{
+        public static void main(String argv[]){
+        Th t = new Th();
+        t.amethod();
+        }
+        public void amethod(){
+                try{
+                ioCall();
+                }catch(IOException ioe){}
+        }
+        
+}
+What code would be most likely for the body of the ioCall method 
+A. public void ioCall ()throws IOException{
+        DataInputStream din = new DataInputStream(System.in);
+        din.readChar();
+        }
+B. public void ioCall ()throw IOException{
+        DataInputStream din = new DataInputStream(System.in);
+        din.readChar();
+        }
+C. public void ioCall (){
+        DataInputStream din = new DataInputStream(System.in);
+        din.readChar();
+        }
+D. public void ioCall throws IOException(){     
+   DataInputStream din = new DataInputStream(System.in);
+        din.readChar();
+        }
+
+ANSWER: A
+
+
+Q. Which of the following can you perform using the File class? 
+
+A. Change the current directory 
+B. Return the name of the parent directory 
+C. Delete a file 
+D. Find if a file contains text or binary information 
+
+ANSWER: B,C
+
+
+
+Q. You have these files in the same directory. What will happen when you attempt to compile and run Class1.java if you have not already compiled Base.java 
+
+//Base.java
+package Base;
+class Base{
+        protected void amethod(){
+                System.out.println("amethod");
+        }//End of amethod
+}//End of class base
+package Class1;
+//Class1.java
+public class Class1 extends Base{
+
+public static void main(String argv[]){
+                Base b = new Base();
+                b.amethod();
+               }//End of main
+}//End of Class1
+A. Compile Error: Methods in Base not found 
+B. Compile Error: Unable to access protected method in base class 
+C. Compilation followed by the output "amethod" 
+D. Compile error: Superclass Class1.Base of class Class1.Class1 not found 
+
+ANSWER: D
+
+
+Q. What will happen when you attempt to compile and run the following code
+
+import java.io.*;
+
+class Base{
+public static void amethod()throws FileNotFoundException{}
+}
+
+public class ExcepDemo extends Base{
+public static void main(String argv[]){
+       ExcepDemo e = new ExcepDemo();
+}
+public static void amethod(){}
+
+protected ExcepDemo(){
+ try{
+  DataInputStream din = new DataInputStream(System.in);
+  System.out.println("Pausing");
+  din.readChar();
+  System.out.println("Continuing");
+  this.amethod();
+  }catch(IOException ioe) {}
+}
+
+}
+
+A. Compile time error caused by protected constructor
+B. Compile time error caused by amethod not declaring Exception
+C. Runtime error caused by amethod not declaring Exception
+D. Compile and run with output of "Pausing" and "Continuing" after a key is hit
+
+ANSWER: D
+
+
+Q. Which of the following will compile without error?
+
+A. File f = new File("/","autoexec.bat");
+B. DataInputStream d = new DataInputStream(System.in);
+C. OutputStreamWriter o = new OutputStreamWriter(System.out);
+D. RandomAccessFile r = new RandomAccessFile("OutFile");
+
+ANSWER: A,B,C
+
+

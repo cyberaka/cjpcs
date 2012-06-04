@@ -1,0 +1,301 @@
+Q. If you compile and execute an application with the following code in its main() method:
+
+	String s = new String( "Computer" );
+	
+	if( s == "Computer" )
+		System.out.println( "Equal A" );
+	if( s.equals( "Computer" ) )
+		System.out.println( "Equal B" );
+A. It will not compile because the String class does not support the = = operator.
+B. It will compile and run, but nothing is printed.
+C. "Equal A" is the only thing that is printed.
+D. "Equal B" is the only thing that is printed.
+E. Both "Equal A" and "Equal B" are printed.
+
+ANSWER: D
+
+
+Q. The statement ... 
+
+String s = "Hello" + "Java"; 
+
+yields the same value for s as ... 
+
+String s = "Hello";
+String s2= "Java";
+s.concat( s2 ); 
+
+A. True
+B. False
+
+ANSWER: B
+
+
+Q. Consider the two statements:
+
+	1. boolean passingScore = false && grade == 70;
+	2. boolean passingScore = false & grade == 70;
+The expression 
+
+grade == 70 
+
+is evaluated:
+
+A. in both 1 and 2
+B. in neither 1 nor 2
+C. in 1 but not 2
+D. in 2 but not 1
+E. invalid because false should be FALSE
+
+ANSWER: D
+
+
+Q. Given the variable declarations below: 
+
+byte myByte;
+int myInt;
+long myLong;
+char myChar;
+float myFloat;
+double myDouble; 
+
+Which one of the following assignments would need an explicit cast?
+
+A. myInt = myByte;
+B. myInt = myLong;
+C. myByte = 3;
+D. myInt = myChar;
+E. myFloat = myDouble;
+F. myFloat = 3;
+G. myDouble = 3.0;
+
+ANSWER: B,E
+
+
+Q. Consider this class example:
+
+class MyPoint 
+{  void myMethod() 
+   {  int x, y;
+      x = 5; y = 3;
+      System.out.print( " ( " + x + ", " + y + " ) " );
+      switchCoords( x, y );
+      System.out.print( " ( " + x + ", " + y + " ) " );
+   }
+   void switchCoords( int x, int y ) 
+   {  int temp;
+      temp = x;
+      x = y;
+      y = temp;
+      System.out.print( " ( " + x + ", " + y + " ) " );
+   }
+}
+What is printed to standard output if myMethod() is executed?
+
+A. (5, 3) (5, 3) (5, 3)
+B. (5, 3) (3, 5) (3, 5)
+C. (5, 3) (3, 5) (5, 3)
+
+ANSWER: C
+
+
+Q. If arr[] contains only positive integer values, what does this function do?
+
+public int guessWhat( int arr[] )
+{  int x= 0;
+   for( int i = 0; i < arr.length; i++ )
+      x = x < arr[i] ? arr[i] : x;
+   return x;
+}
+A. Returns the index of the highest element in the array
+B. Returns true/false if there are any elements that repeat in the array
+C. Returns how many even numbers are in the array
+D. Returns the highest element in the array
+E. Returns the number of question marks in the array
+
+ANSWER: D
+
+
+Q. Given the following code what will be output? 
+public class Pass{
+static int j=20;
+public static void main(String argv[]){
+        int i=10;
+        Pass p = new Pass();
+        p.amethod(i);
+        System.out.println(i);
+        System.out.println(j);
+        }
+        public void amethod(int x){
+        x=x*2;
+        j=j*2;
+        }
+}
+A. Error: amethod parameter does not match variable 
+B. 20 and 40 
+C. 10 and 40 
+D. 10, and 20 
+
+ANSWER: C
+
+
+Q. What will happen when you try compiling and running this code? 
+public class Ref{
+public static void main(String argv[]){
+          Ref r = new Ref();
+          r.amethod(r);
+          }
+          public void amethod(Ref r){
+          int i=99;
+          multi(r);
+          System.out.println(i);
+          }
+          public void multi(Ref r){
+          r.i = r.i*2;
+          }
+}
+A. Error at compile time 
+B. An output of 99 
+C. An output of 198 
+D. An error at runtime 
+
+ANSWER: A
+
+
+Q. What will happen when you attempt to compile and run the following code
+
+
+public class StrEq{
+
+public static void main(String argv[]){
+        StrEq s = new StrEq();
+        }
+        private StrEq(){
+                String s = "Marcus";
+                String s2 = new String("Marcus");
+                if(s == s2){
+                        System.out.println("we have a match");
+                        }else{
+                        System.out.println("Not equal");
+                }
+       }
+}
+A. Compile time error caused by private constructor
+B. Output of "we have a match"
+C. Output of "Not equal"
+D. Compile time error by attempting to compare strings using ==
+
+ANSWER: C
+
+
+Q. What will happen when you attempt to compile and run the following code
+
+int Output=10;
+boolean b1 = false;
+if((b1==true) && ((Output+=10)==20)){
+    System.out.println("We are equal "+Output);
+    }else
+    {
+    System.out.println("Not equal! "+Output);
+}
+
+A. Compile error, attempting to peform binary comparison on logical data type
+B. Compilation and output of "We are equal 10"
+C. Compilation and output of "Not equal! 20"
+D. Compilation and output of "Not equal! 10"
+
+ANSWER: D
+
+
+Q. What will be output by the following line of code?
+
+System.out.println(010|4);
+
+A. 14
+B. 0
+C. 6
+D. 12
+
+ANSWER: D
+
+
+Q. Given the following variables
+
+char c = 'c';
+int i = 10;
+double d = 10;
+long l = 1;
+String s = "Hello";
+Which of the following will compile without error?
+
+A. c=c+i; 
+B. s+=i; 
+C. i+=s; 
+D. c+=s;
+
+ANSWER: B
+
+
+
+
+Q. What will happen if you compile/run this code?
+
+1:    public class Q10
+2:    {
+3:      public static void main(String[] args)
+4:      {
+5:          int i = 10;
+6:          int j = 10;
+7:          boolean b = false;
+8:          
+9:          if( b = i == j)
+10:            System.out.println("True");
+11:         else
+12:        System.out.println("False");
+13: }
+14:    }
+
+A. Compilation error at line 9 .
+B. Runtime error exception at line 9.
+C. Prints "True".
+D. Prints "Fasle".
+
+ANSWER: C
+
+
+Q. What is the output of the following code?
+
+1:    class MyClass
+2:    {
+3:        static int maxElements;
+4:    
+5:        MyClass(int maxElements)
+6:        {
+7:            this.maxElements = maxElements;
+8:        }
+9:    
+10:    }
+11:
+12:    public class Q19
+13:    {
+14:        public static void main(String[] args)
+15:        {
+16:    
+17:            MyClass a = new MyClass(100);
+18:            MyClass b = new MyClass(100);
+19:        
+20:            if(a.equals(b))
+21:                System.out.println("Objects have the same values");
+22:            else
+23:                System.out.println("Objects have different values");
+24:        }
+25:    }
+
+A. Compilation error at line 20. equals() method was not defined.
+B. Compiles fine, runtime exception at line 20.
+C. Prints "Objects have the same values".
+D. Prints "Objects have different values";
+    
+ANSWER: D
+
+

@@ -1,0 +1,240 @@
+Q. Consider the code below:
+
+
+public static void main( String args[] )
+{  int a = 5;
+   System.out.println( cube( a ) );
+}
+int cube( int theNum )
+{
+   return theNum * theNum * theNum;
+}
+
+What will happen when you attempt to compile and run this code?
+
+A. It will not compile because cube is already defined in the java.lang.Math class.
+B. It will not compile because cube is not static.
+C. It will compile, but throw an arithmetic exception.
+D. It will run perfectly and print "125" to standard output.
+
+ANSWER: B
+
+
+Q. Which method below can change a String object, s ?
+
+A. equals( s )
+B. substring( s )
+C. concat( s )
+D. toUpperCase( s )
+E. none of the above will change s
+
+ANSWER: E
+
+
+Q. If s1 is declared as: 
+
+String s1 = "phenobarbital";
+
+What will be the value of s2 after the following line of code: 
+
+String s2 = s1.substring( 3, 5 ); 
+
+
+A. null
+B. "eno"
+C. "enoba"
+D. "no"
+
+ANSWER: D
+
+
+Q. What method(s) from the java.lang.Math class might method() be if the statement
+
+method( -4.4 ) == -4;
+
+is true.
+
+A. round()
+B. min()
+C. trunc()
+D. abs()
+E. floor()
+F. ceil()
+
+ANSWER: A,F
+
+
+Q. Which methods does java.lang.Math include for trigonometric computations?
+
+A. sin()
+B. cos()
+C. tan()
+D. aSin()
+E. aCos()
+F. aTan()
+G. toDegree()
+
+ANSWER: A,B,C
+
+
+Q. Which of the following will output -4.0 
+
+A. System.out.println(Math.floor(-4.7)); 
+B. System.out.println(Math.round(-4.7)); 
+C. System.out.println(Math.ceil(-4.7)); 
+D. System.out.println(Math.Min(-4.7)); 
+
+ANSWER: C
+
+
+Q. If you run the code below, what gets printed out? 
+
+String s=new String("Bicycle"); 
+int iBegin=1; 
+char iEnd=3; 
+System.out.println(s.substring(iBegin,iEnd));
+
+A. Bic
+B. ic 
+C. icy 
+D. error: no method matching substring(int,char) 
+
+ANSWER: B
+
+
+Q. If you wanted to find out where the position of the letter v (ie return 2) in the string s 
+containing "Java", which of the following could you use? 
+A. mid(2,s); 
+B. charAt(2); 
+C. s.indexOf('v'); 
+D. indexOf(s,'v'); 
+
+ANSWER: C
+
+
+Q. Given the following declarations 
+String s1=new String("Hello") 
+String s2=new String("there"); 
+String s3=new String();
+Which of the following are legal operations? 
+
+A. s3=s1 + s2;
+B. s3=s1-s2; 
+C. s3=s1 & s2 
+D. s3=s1 && s2 
+
+ANSWER: A
+
+
+Q. What will be the result when you attempt to compile and run the following code?. 
+
+public class Conv{
+    public static void main(String argv[]){ 
+        Conv c=new Conv(); 
+        String s=new String("ello"); 
+        c.amethod(s); 
+    } 
+public void amethod(String s){ 
+    char c='H'; 
+    c+=s; 
+    System.out.println(c); 
+    } 
+}
+
+A. Compilation and output the string "Hello" 
+B. Compilation and output the string "ello" 
+C. Compilation and output the string elloH 
+D. Compile time error 
+
+ANSWER: D
+
+
+Q. Given the following code, what test would you need to put in place of the comment line? 
+//place test here 
+
+to result in an output of 
+
+Equal
+public class EqTest{ 
+    public static void main(String argv[]){ 
+    EqTest e=new EqTest(); 
+    }
+EqTest(){ 
+    String s="Java"; 
+    String s2="java"; 
+    //place test here {
+        System.out.println("Equal"); 
+        }else 
+        { 
+        System.out.println("Not equal"); 
+        }
+     } 
+}
+A. if(s==s2) 
+B. if(s.equals(s2) 
+C. if(s.equalsIgnoreCase(s2)) 
+D.if(s.noCaseMatch(s2)) 
+
+ANSWER: C
+
+
+Q. What will be the result when you attempt to compile this program? 
+public class Rand{
+public static void main(String argv[]){
+        int iRand;
+        iRand = Math.random();
+        System.out.println(iRand);
+        }
+}
+A. Compile time error referring to a cast problem 
+B. A random number between 1 and 10 
+C. A random number between 0 and 1 
+D. A compile time error about random being an unrecognised method 
+
+ANSWER: A
+
+
+Q. What will be output by the following line?
+
+System.out.println(Math.floor(-2.1));
+A. -2
+B. 2.0
+C. -3
+D. -3.0
+
+ANSWER: D
+
+
+Q. What is the output of the following code?
+
+1:    String str = "Welcome";
+2:
+3:    str.concat(" to Java!");
+4:
+5:    System.out.println(str);
+
+A. Strings are immutable, compilation error at line 3.
+B. Strings are immutable, runtime exception at line 3.
+C. Prints "Welcome".
+D. Prints "Welcome to Java!".
+
+ANSWER: C
+
+
+Q. What will happen if you invoke the following method?
+1:  public void check()
+2:  {
+3:      System.out.println(Math.min(-0.0,+0.0));
+4:      System.out.println(Math.max(-0.0,+0.0));
+5:	   System.out.println(Math.min(-0.0,+0.0) == Math.max(0.0,+0.0));
+6:  }
+    
+ 
+A. prints -0.0, +0.0 and false.
+B. prints -0.0, +0.0 and true.
+C. prints 0.0, 0.0 and false.
+D. prints 0.0, 0.0 and true.
+ 
+ANSWER: B
+
+

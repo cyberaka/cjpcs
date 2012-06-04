@@ -1,0 +1,547 @@
+Q. This piece of code:
+
+TextArea ta = new TextArea( 10, 3 );
+
+Produces (select all correct statements):
+
+A. a TextArea with 10 rows and up to 3 columns
+B. a TextArea with a variable number of columns not less than 10 and 3 rows
+C. a TextArea that may not contain more than 30 characters
+D. a TextArea that can be edited
+
+ANSWER: A,D
+
+
+Q. In the list below, which subclass(es) of Component cannot be directly instantiated:
+
+A. Panel
+B. Dialog
+C. Container
+D. Frame
+
+ANSWER: C
+
+
+Q. Of the five Component methods listed below, only one is also a method of the class MenuItem. Which one?
+
+A. setVisible( boolean b )
+B. setEnabled( boolean b )
+C. getSize()
+D. setForeground( Color c )
+E. setBackground( Color c )
+
+ANSWER: B
+
+
+Q. If a font with variable width is used to construct the string text for a column, the initial size of the column is:
+
+A. determined by the number of characters in the string, multiplied by the width of a character in this font
+B. determined by the number of characters in the string, multiplied by the average width of a character in this font
+C. exclusively determined by the number of characters in the string
+D. undetermined
+
+ANSWER: B
+
+
+Q. Which of the following methods from the java.awt.Graphics class would be used to draw the outline of a rectangle with a single method call?
+
+A. fillRect()
+B. drawRect()
+C. fillPolygon()
+D. drawPolygon()
+E. drawLine()
+
+ANSWER: B,D
+
+
+Q. The Container methods add( Component comp ) and add( String name, Component comp ) will throw an IllegalArgumentException if comp is a:
+
+A. button
+B. list
+C. window
+D. textarea
+E. container that contains this container
+
+ANSWER: C,E
+
+
+Q. Of the following AWT classes, which one(s) are responsible for implementing the components layout?
+
+A. LayoutManager
+B. GridBagLayout
+C. ActionListener
+D. WindowAdapter
+E. FlowLayout
+
+ANSWER: B,E
+
+
+Q. A component that should resize vertically but not horizontally should be placed in a:
+
+A. BorderLayout in the North or South location
+B. FlowLayout as the first component
+C. BorderLayout in the East or West location
+D. BorderLayout in the Center location
+E. GridLayout
+
+ANSWER: C
+
+
+Q. What type of object is the parameter for all methods of the MouseListener interface?
+
+ANSWER: MouseEvent
+
+
+Q. Which of the following statements about event handling in JDK 1.1 and later are true?
+
+A. A class can implement multiple listener interfaces
+B. If a class implements a listener interface, it only has to overload the methods it uses
+C. All of the MouseMotionAdapter class methods have a void return type.
+
+ANSWER: A,C
+
+
+Q. Which of the following describe the sequence of method calls that result in a component being redrawn?
+
+A. invoke paint() directly
+B. invoke update which calls paint()
+C. invoke repaint() which invokes update(), which in turn invokes paint()
+D. invoke repaint() which invokes paint directly
+
+ANSWER: C
+
+
+Q. You are browsing the Java HTML documentation for information on the 
+java.awt.TextField component. You want to create Listener code to respond to focus 
+events. The only Listener method listed is addActionListener. How do you go about 
+finding out about Listener methods? 
+
+A. Define your own Listener interface according to the event to be tracked
+B. Use the search facility in the HTML documentation for the listener needed 
+C. Move up the hierarchy in the HTML documentation to locate methods in base 
+classes 
+D. Subclass awt.event with the appropriate Listener method 
+
+ANSWER: C
+
+
+Q. What will be displayed when you attempt to compile and run the following code 
+
+//Code start 
+import java.awt.*;
+public class Butt extends Frame{
+public static void main(String argv[]){ 
+        Butt MyBut=new Butt(); 
+        }
+Butt(){ 
+        Button HelloBut=new Button("Hello"); 
+        Button ByeBut=new Button("Bye"); 
+        add(HelloBut); 
+        add(ByeBut); 
+        setSize(300,300); 
+        setVisible(true); 
+        } 
+} 
+//Code end
+A. Two buttons side by side occupying all of the frame, Hello on the left and Bye on 
+the right 
+B. One button occupying the entire frame saying Hello 
+C. One button occupying the entire frame saying Bye 
+D. Two buttons at the top of the frame one saying Hello the other saying Bye 
+
+ANSWER: C
+
+
+Q. If g is a graphics instance what will the following code draw on the screen?. 
+  
+
+g.fillArc(45,90,50,50,90,180);
+
+A. An arc bounded by a box of height 45, width 90 with a centre point of 50,50, starting 
+at an angle of 90 degrees traversing through 180 degrees counter clockwise. 
+B. An arc bounded by a box of height 50, width 50, with a centre point of 45,90 starting 
+at an angle of 90 degrees traversing through 180 degrees clockwise. 
+
+C. An arc bounded by a box of height 50, width 50, with a top left at coordinates of 45, 
+90, starting at 90 degrees and traversing through 180 degrees counter clockwise. 
+
+D. An arc starting at 45 degrees, traversing through 90 degrees clockwise bounded by a 
+box of height 50, width 50 with a centre point of 90, 180. 
+
+ANSWER: C
+
+
+Q. How would you go about opening an image file called MyPicture.jpg 
+
+A. Graphics.getGraphics("MyPicture.jpg"); 
+B. Image image=Toolkit.getDefaultToolkit().getImage("MyPicture.jpg"); 
+C. Graphics.openImage("MyPicture"); 
+D. Image m=new Image("MyPicture"); 
+
+ANSWER: B
+
+
+Q. An Applet has its Layout Manager set to the default of FlowLayout. What code would be correct to change to another Layout Manager. 
+
+A. setLayoutManager(new GridLayout()); 
+B. setLayout(new GridLayout(2,2)); 
+C. setGridLayout(2,2,)) 
+D. setBorderLayout(); 
+
+ANSWER: B
+
+
+Q. You have created an applet that draws lines. You have overriden the paint operation and used the graphics drawLine method, and increase one of its parameters to multiple lines across the screen. When you first test the applet you find that the news lines are redrawn, but the old lines are erased. How can you modify your code to allow the old lines to stay on the screen instead of being cleared. 
+A. Override repaint thus 
+
+public void repaint(Graphics g){ 
+    paint(g); 
+    }
+B.Override update thus 
+public void update(Graphics g) { 
+        paint(g); 
+        }
+C. turn off clearing with the method setClear(); 
+D. Remove the drawing from the paint Method and place in the calling code 
+
+ANSWER: B
+
+
+Q. Given the following code 
+import java.awt.*;
+public class SetF extends Frame{
+public static void main(String argv[]){
+        SetF s=new SetF();
+        s.setSize(300,200);
+        s.setVisible(true);
+        }
+}
+How could you set the frame surface color to pink 
+A. s.setBackground(Color.pink); 
+B. s.setColor(PINK); 
+C. s.Background(pink); 
+D. s.color=Color.pink 
+
+ANSWER: B
+
+
+Q. If you create a TextField  with a constructor to set it to occupy 5 columns, what difference will it make if you use it with a proportional font (ie Times Roman) or a fixed pitch typewriter style font (Courier). 
+A. With a fixed font you will see 5 characters, with a  proportional it will depend on the width of the characters 
+B. With a fixed font you will see 5 characters,with a  proportional it will cause the field to expand to fit the text 
+C. The columns setting does not affect the number of characters displayed 
+D. Both will show exactly 5 characters 
+
+ANSWER: A
+
+
+Q. You have created a simple Frame and overridden the paint method as follows 
+public void paint(Graphics g){
+ g.drawString("Dolly",50,10);
+}
+
+What will be the result when you attempt to compile and run the program? 
+
+A. The string "Dolly" will be displayed at the centre of the frame 
+B. An error at compilation complaining at the signature of the paint method 
+C. The lower part of the word Dolly will be seen at the top of the form, with the top hidden. 
+D. The string "Dolly" will be shown at the bottom of the form 
+
+ANSWER: C
+
+
+Q. You want to lay out a set of buttons horizontally but with more space between the first button and the rest. You are going to use the GridBagLayout manager to control the way the buttons are set out. How will you modify the way the GridBagLayout acts in order to change the spacing around the first button? 
+  
+
+A. Create an instance of the GridBagConstraints class, call the weightx() method and then pass the GridBagConstraints instance with the component to the setConstraints method of the GridBagLayout class. 
+
+B. Create an instance of the GridBagConstraints class, set the weightx field and then pass the GridBagConstraints instance with the component to the setConstraints method of the GridBagLayout class. 
+
+C. Create an instance of the GridBagLayout class, set the weightx field and then call the setConstraints method of the GridBagLayoutClass with the component as a parameter. 
+
+D. Create an instance of the GridBagLayout class, call the setWeightx() method and then pass the GridBagConstraints instance with the component to the setConstraints method of the GridBagLayout class. 
+
+ANSWER: B
+
+
+Q. Which of the following code fragments will compile without error 
+A. 
+
+public void paint(Graphics g){
+  int polyX[] = {20,150,150};
+  int polyY[]= {20,20,120};
+  g.drawPolygon(polyX, polyY,3);
+  }
+B.
+public void paint(Graphics g){
+  int polyX[] = {20,150,150};
+  int polyY[]= {20,20,120};
+  g.drawPolygon(polyX, polyY);
+  }
+C.
+public void paint(Graphics g){
+  int polyX[3] = {20,150,150};
+  int polyY[3]= {20,20,120};
+  g.drawPolygon(polyX, polyY,3);
+  }
+D.
+public void paint(Graphics g){
+  int polyX[] = {20,150,150};
+  int polyY[]= {20,20,120};
+  drawPolygon(polyX, polyY);
+  }
+
+ANSWER: A
+
+
+Q. You are using the GridBagLayout manager to place a series of buttons on a Frame. You want to make the size of one of the buttons bigger than the text it contains. Which of the following will allow you to do that? 
+A. The GridBagLayout manager does not allow you to do this 
+B. The setFill method of the GridBagLayout class 
+C. The setFill method of the GridBagConstraints class 
+D. The fill field of the GridBagConstraints class 
+  
+ANSWER: D
+
+
+Q. You are creating an applet with a Frame that contains buttons. You are using the GridBagLayout manager and you have added Four buttons. At the moment the buttons appear in the centre of the frame from left to right. You want them to appear one on top of the other going down the screen. What is the most appropriate way to do this. 
+  
+A. Set the gridy value of the GridBagConstraint class to a value increasing from 1 to 4 
+B. set the fill value of the GridBagConstrint class to VERTICAL 
+C. Set the ipady value of the GridBagConstraint class to a value increasing from 0 to 4 
+D. Set the fill value of the GridBagLayout class to GridBag.VERTICAL 
+
+ANSWER: A
+
+Q. What best describes the appearance of an application with the following code?
+
+import java.awt.*;
+
+public class FlowAp extends Frame{
+
+public static void main(String argv[]){
+    FlowAp fa=new FlowAp();
+    fa.setSize(400,300);
+    fa.setVisible(true);
+}
+FlowAp(){
+        add(new Button("One"));
+        add(new Button("Two"));
+        add(new Button("Three"));
+        add(new Button("Four"));
+    }//End of constructor
+
+}//End of Application
+A. A Frame with buttons marked One to Four placed on each edge.
+B. A Frame with buutons marked One to four running from the top to bottom
+C. A Frame with one large button marked Four in the Centre
+D. An Error at run time indicating you have not set a LayoutManager
+
+ANSWER: C
+
+
+Q. How do you indicate where a component will be positioned using Flowlayout?
+
+A. North, South,East,West
+B. Assign a row/column grid reference
+C. Pass a X/Y percentage parameter to the add method
+D. Do nothing, the FlowLayout will position the component
+
+ANSWER: D
+
+
+Q. How do you change the current layout manager for a container
+
+A. Use the setLayout method
+B. Once created you cannot change the current layout manager of a component
+C. Use the setLayoutManager method
+D. Use the updateLayout method
+
+ANSWER: A
+
+
+Q. Which of the following are fields of the GridBagConstraints class?
+
+A. ipadx
+B. fill
+C. insets
+D. width
+
+ANSWER: A,B,C
+
+
+Q. What most closely matches the appearance when this code runs?
+
+import java.awt.*;
+
+public class CompLay extends Frame{
+public static void main(String argv[]){
+    CompLay cl = new CompLay();
+    }
+
+CompLay(){
+    Panel p = new Panel();
+    p.setBackground(Color.pink);
+    p.add(new Button("One"));
+    p.add(new Button("Two"));
+    p.add(new Button("Three"));
+    add("South",p);
+    setLayout(new FlowLayout());
+    setSize(300,300);
+    setVisible(true);
+    }
+}
+
+A. The buttons will run from left to right along the bottom of the Frame
+B. The buttons will run from left to right along the top of the frame
+C. The buttons will not be displayed
+D. Only button three will show occupying all of the frame
+
+ANSWER: B
+
+
+Q. Which statements are correct about the anchor field?
+
+A. It is a field of the GridBagLayout manager for controlling component placement
+B. It is a field of the GridBagConstraints class for controlling component placement
+C. A valid setting for the anchor field is GridBagConstraints.NORTH
+D. The anchor field controls the height of components added to a container
+
+ANSWER: B,C
+
+
+Q. When using the GridBagLayout manager, each new component requires a new instance of the GridBagConstraints class. Is this statement
+
+A. true
+B. false
+
+ANSWER: B
+
+
+Q. What will happen when you attempt to compile and run this code
+
+//Demonstration of event handling
+import java.awt.event.*;
+import java.awt.*;
+
+public class MyWc extends Frame implements WindowListener{
+public static void main(String argv[]){
+        MyWc mwc = new MyWc();
+        }
+        public void windowClosing(WindowEvent we){
+                System.exit(0);
+                }//End of windowClosing
+
+      public void  MyWc(){
+        setSize(300,300);
+        setVisible(true);
+        }
+}//End of class
+
+A. Error at compile time
+B. Visible Frame created that that can be closed
+C. Compilation but no output at run time
+D. Error at compile time because of comment before import statements
+
+ANSWER: A
+
+
+Q. Which of the following statements are correct?
+
+A. If multiple listeners are added to a component only events for the last listener added will be processed
+B. If multiple listeners are added to a component the events will be processed for all but with no guarantee in the order
+C. Adding multiple listeners to a comnponent will cause a compile time error
+D. You may remove as well add listeners to a component.
+
+ANSWER: B,D
+
+
+Q. Which of the following are correct event handling methods
+
+
+A. mousePressed(MouseEvent e){}
+B. MousePressed(MouseClick e){}
+C. functionKey(KeyPress k){}
+D. componentAdded(ContainerEvent e){}
+
+ANSWER: A,D
+
+
+Q. In the following applet, how many Buttons will be displayed?
+    
+1:    import java.applet.*;
+2:    import java.awt.*;
+3:
+4:    public class Q16 extends Applet
+5:    {
+6:        Button okButton = new Button("Ok");
+7:
+8:        public void init()
+9:        {
+10:            add(okButton);
+11:            add(okButton);
+12:            add(okButton);
+13:            add(okButton);
+14:
+15:            add(new Button("Cancel"));
+16:            add(new Button("Cancel"));
+17:            add(new Button("Cancel"));
+18:            add(new Button("Cancel"));
+19:
+20:            setSize(300,300);
+21:        }
+22:	}
+
+A. 1 Button with label "Ok" and 1 Button with label "Cancel" .
+B. 1 Button with label "Ok" and 4 Buttons with label "Cancel" .
+C. 4 Buttons with label "Ok" and 1 Button with label "Cancel" .
+D. 4 Buttons with label "Ok" and 4 Buttons with label "Cancel" .
+
+ANSWER: B
+
+
+Q. In the following, which is correct Container-Default layout combination?
+
+ 
+A. Applet - FlowLayout
+B. Applet - BorderLayout
+C. Applet - CardLayout
+D. Frame - Flowlayout
+E. Frame - BorderLayout
+F. Frame - CardLayout
+G. Panel - FlowLayout
+H. Panel - BorderLayout.
+ 
+ANSWER: A,E,G
+
+
+Q.  
+1:    import java.applet.*;
+2:    import java.awt.*;
+3:
+4:    public class Q20 extends Applet
+5:    {
+6:        Button  okButton = new Button("Ok");
+7:    
+8:        public void init()
+9:        {
+10:            setLayout(new BorderLayout());
+11:        
+12:            add("South",  okButton);
+13:            add("North",  okButton);
+14:            add("East",   okButton);
+15:            add("West",   okButton);
+16:            add("Center", okButon);
+17:
+18:            setSize(300,300);
+19:        }
+20:    }
+
+    The above Applet will display
+
+A. Five Buttons with label "Ok" at Top, Bottom, Right, Left and Center of the Applet.
+B. Only one Button with label "Ok" at the Top of the Applet.
+C. Only one Button with label "Ok" at the Bottom of the applet.
+D. Only one Button with label "Ok" at the Center of the Applet.
+    
+ANSWER: D
+
+

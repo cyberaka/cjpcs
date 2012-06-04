@@ -1,0 +1,380 @@
+Q. If size = 4, triArray looks like:
+
+
+int[][] makeArray( int sizE. 
+{  int[][] triArray = new int[size] [];
+   int val=1;
+   for( int i = 0; i < triArray.length; i++ ) 
+   {  triArray[i] = new int[i+1];
+	  for( int j=0; j < triArray[i].length; j++ )
+      {  triArray[i][j] = val++;
+      }
+   }
+   return triArray;
+}
+
+A. 
+1 2 3 4
+5 6 7
+8 9
+10 
+B. 
+1 4 9 16 
+C. 
+1 2 3 4 
+D. 
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16 
+E. 
+1
+2 3 
+4 5 6 
+7 8 9 10 
+
+ANSWER: E
+
+
+Q. Given the variables defined below: 
+
+int one = 1;
+int two = 2;
+char initial = '2';
+boolean flag = true; 
+
+Which of the following are valid?
+
+A. if( one ){}
+B. if( one = two ){}
+C. if( one == two ){}
+D. if( flag ){}
+E. switch( one ){}
+F. switch( flag ){}
+G. switch( initial ){}
+
+ANSWER: C,D,E,G
+
+
+Q. If val = 1 in the code below:
+
+
+switch( val ) 
+{  case 1: System.out.print( "P" );
+   case 2: 
+   case 3: System.out.print( "Q" );
+      break;
+   case 4: System.out.print( "R" );
+   default: System.out.print( "S" );
+}
+
+Which values would be printed?
+
+A. P
+B. Q
+C. R
+D. S
+
+ANSWER: A,B
+
+
+Q. Assume that val has been defined as an int for the code below:
+
+
+if( val > 4 ) 
+{  System.out.println( "Test A" );
+}
+else if( val > 9 ) 
+{  System.out.println( "Test B" );
+}
+else System.out.println( "Test C" );
+
+Which values of val will result in "Test C" being printed:
+
+A. val < 0 
+B. val between 0 and 4 
+C. val between 4 and 9 
+D. val > 9 
+E. val = 0 
+F. no values for val will be satisfactory
+
+ANSWER: A,B,E
+
+
+Q. What exception might a wait() method throw?
+
+ANSWER: InterruptedException 
+
+
+Q. For the code:
+
+
+m = 0;
+while( m++ < 2 )
+   System.out.println( m );
+
+Which of the following are printed to standard output?
+
+A. 0
+B. 1
+C. 2
+D. 3
+E. Nothing and an exception is thrown
+
+ANSWER: B,C
+
+
+Q. Consider the code fragment below:
+
+
+outer: for( int i = 1; i <3; i++ )
+   {  inner: for( j = 1; j < 3; j++ )
+      {  if( j==2 )
+            continue outer;
+            System.out.println( "i = " +i ", j = " + j );
+      }
+   }	
+
+Which of the following would be printed to standard output?
+
+A. i = 1, j = 1
+B. i = 1, j = 2
+C. i = 1, j = 3
+D. i = 2, j = 1
+E. i = 2, j = 2
+F. i = 2, j = 3
+G. i = 3, j = 1
+H. i = 3, j = 2
+
+ANSWER: A,D
+
+
+Q. Consider the code below:
+
+void myMethod() 
+{  try 
+   {  
+      fragile();
+   }
+   catch( NullPointerException npex ) 
+   {  
+      System.out.println( "NullPointerException thrown " );
+   }
+   catch( Exception ex ) 
+      {  
+         System.out.println( "Exception thrown " );
+      }
+   finally 
+   {  
+      System.out.println( "Done with exceptions " ); 
+   }
+   System.out.println( "myMethod is done" );
+}
+What is printed to standard output if fragile() throws an IllegalArgumentException?
+
+A. "NullPointerException thrown"
+B. "Exception thrown"
+C. "Done with exceptions"
+D. "myMethod is done"
+E. Nothing is printed
+
+ANSWER: B,C,D
+
+
+Q. What will be printed out if you attempt to compile and run the following code ? 
+int i=1; 
+        switch (i) { 
+                case 0: 
+                System.out.println("zero"); 
+        break; 
+        case 1: 
+                System.out.println("one"); 
+        case 2: 
+                System.out.println("two"); 
+        default: 
+                System.out.println("default"); 
+        }
+A. one 
+B. one, default 
+C. one, two, default 
+D. default 
+
+ANSWER: C
+
+
+Q. What will be printed out if you attempt to compile and run the following code? 
+int i=9; 
+switch (i) { 
+        default: 
+        System.out.println("default"); 
+                case 0: 
+        System.out.println("zero"); 
+                break; 
+        case 1: 
+                System.out.println("one"); 
+        case 2: 
+        System.out.println("two"); 
+}
+A. default 
+B. default, zero 
+C. error default clause not defined 
+D. no output displayed 
+
+ANSWER: B
+
+
+Q. Which of the following lines of code will compile without error 
+A. 
+
+int i=0; 
+if(i) { 
+        System.out.println("Hello"); 
+        }
+B. 
+boolean b=true; 
+boolean b2=true; 
+if(b==b2) { 
+        System.out.println("So true"); 
+        }
+C. 
+int i=1; 
+int j=2; 
+if(i==1|| j==2) 
+        System.out.println("OK");
+D. 
+int i=1; 
+int j=2; 
+if(i==1 &| j==2) 
+        System.out.println("OK");
+
+ANSWER: B,C
+
+
+Q. What will be output if you try to compile and run the following code, but there is 
+no file called Hello.txt in the current directory?. 
+import java.io.*; 
+public class Mine { 
+        public static void main(String argv[]){
+        Mine m=new Mine(); 
+        System.out.println(m.amethod()); 
+}
+public int amethod() { 
+        try {
+                FileInputStream dis=new FileInputStream("Hello.txt"); 
+                }catch (FileNotFoundException fne) { 
+                        System.out.println("No such file found"); 
+                        return -1; 
+                        }catch(IOException ioe) { 
+                        } finally{ 
+        System.out.println("Doing finally"); 
+        } 
+        return 0; 
+        } 
+}
+A. No such file found 
+B. No such file found ,-1 
+C. No such file found, Doing finally, -1 
+D. 0 
+
+ANSWER: C
+
+
+Q. What will be output by the following code? 
+
+public class MyFor{
+public static void main(String argv[]){ 
+    int i; 
+    int j; 
+    outer: 
+    for (i=1;i <3;i++) 
+        inner: 
+         for(j=1; j<3; j++) { 
+                    if (j==2) 
+                    continue outer; 
+                    System.out.println("Value for i=" + i + " Value for j=" +j); 
+                    } 
+        } 
+}
+A. Value for i=1 value for j=1 
+B. Value for i=2 value for j=1 
+C. Value for i=2 value for j=2 
+D. Value for i=3 value for j=1 
+
+ANSWER: A,B
+
+
+Q. What code placed after the comment //For loop would populate the elements of the array ia[] with values of the variable i.? 
+
+public class Lin{
+public static void main(String argv[]){
+        Lin l = new Lin();
+        l.amethod(); 
+        }
+        public void amethod(){
+        int ia[] = new int[4];
+                        //Start For loop        
+                        {
+           ia[i]=i;
+           System.out.println(ia[i]);
+           }
+        }
+}
+A. for(int i=0; i < ia.length() -1; i++) 
+B. for (int i=0; i< ia.length(); i++) 
+C. for(int i=1; i < 4; i++) 
+D. for(int i=0; i< ia.length;i++) 
+
+ANSWER: D
+
+
+Q. What will happen when you attempt to compile and run the following code
+
+public class MySwitch{
+
+public static void main(String argv[]){
+    MySwitch ms= new MySwitch();
+    ms.amethod();
+    }
+
+public void amethod(){
+
+    int k=10; 
+        switch(k){ 
+        default: //Put the default at the bottom, not here
+            System.out.println("This is the default output"); 
+            break; 
+         case 10: 
+            System.out.println("ten");
+         case 20: 
+            System.out.println("twenty"); 
+        break; 
+       }
+    }
+}
+A. None of these options
+B. Compile time errror target of switch must be an integral type
+C. Compile and run with output "This is the default output"
+D. Compile and run with output "ten"
+
+ANSWER: A
+
+
+Q. What will happen when you invoke the following method?
+
+1:    void infiniteLoop()
+2:    {
+3:        byte b = 1;
+4:        
+5:        while ( ++b > 0 )
+6:            ;
+7:        System.out.println("Welcome to Java");
+8:    }
+    
+A. The loop never ends(infiniteLoop).
+B. Prints "Welcome to Java".
+C. Compilation error at line 5. ++ operator should not be used for byte type variables.
+D. Prints nothing.
+
+ANSWER: B
+
+

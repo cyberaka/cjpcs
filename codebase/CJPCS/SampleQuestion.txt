@@ -1,0 +1,957 @@
+Q. If you want subclasses to access, but not to override a superclass member method, what keyword should precede the name of the superclass method?
+
+ANSWER:final
+
+Q. What will happen when you compile and run the following code? 
+  
+  
+public class MyClass{ 
+        static int i; 
+        public static void main(String argv[]){ 
+                System.out.println(i); 
+                } 
+}
+A. Error Variable i may not have been initialized 
+B. null 
+C. 1 
+D. 0
+
+ANSWER:D
+
+Q. What will be the result of attempting to compile and run the following code? 
+
+abstract class MineBase { 
+        abstract void amethod(); 
+        static int i; 
+}
+public class Mine extends MineBase      { 
+        public static void main(String argv[]){ 
+                        int[] ar=new int[5]; 
+                        for(i=0;i < ar.length;i++) 
+                                System.out.println(ar[i]); 
+                        } 
+}
+
+A. a sequence of 5 0's will be printed
+B. Error: ar is used before it is initialized 
+C. Error Mine must be declared abstract 
+D. IndexOutOfBoundes Error 
+
+ANSWER:C
+
+Q. What will happen when you attempt to compile and run this code?
+
+
+class Base{
+public final void amethod(){
+        System.out.println("amethod");
+        }
+}
+public class Fin extends Base{
+public static void main(String argv[]){
+        Base b = new Base();
+        b.amethod();
+        }
+}
+
+A. Compile time error indicating that a class with any final methods must be declared final itself
+B. Compile time error indicating that you cannot inherit from a class with final methods
+C. Run time error indicating that Base is not defined as final
+D. Success in compilation and output of "amethod" at run time.
+
+ANSWER:D
+
+Q. What will happen when you attempt to compile and run this code?
+
+public class Mod{
+public static void main(String argv[]){
+    }
+        public static native void amethod();
+}
+
+A. Error at compilation: native method cannot be static
+B. Error at compilation native method must return value
+C. Compilation but error at run time unless you have made code containing native amethod available
+D. Compilation and execution without error
+
+ANSWER:D
+
+Q. Which of the following statements are true
+
+A. An inner class may be defined as static
+B. An inner class may NOT be define as private
+C. An anonymous class may have only one constructor
+D. An inner class may extend another class
+
+ANSWER:A,D
+
+Q. What exception might a wait() method throw?
+
+ANSWER:InterruptedException 
+
+Q. For the code:
+
+
+m = 0;
+while( m++ < 2 )
+   System.out.println( m );
+
+Which of the following are printed to standard output?
+
+A. 0
+B. 1
+C. 2
+D. 3
+E. Nothing and an exception is thrown
+
+ANSWER:B,C
+
+Q. Consider the code fragment below:
+
+
+outer: for( int i = 1; i <3; i++ )
+   {  inner: for( j = 1; j < 3; j++ )
+      {  if( j==2 )
+            continue outer;
+            System.out.println( "i = " +i ", j = " + j );
+      }
+   }	
+
+Which of the following would be printed to standard output?
+
+A. i = 1, j = 1
+B. i = 1, j = 2
+C. i = 1, j = 3
+D. i = 2, j = 1
+E. i = 2, j = 2
+F. i = 2, j = 3
+G. i = 3, j = 1
+H. i = 3, j = 2
+
+ANSWER:A,D
+
+Q. What will be output by the following code? 
+
+public class MyFor{
+public static void main(String argv[]){ 
+    int i; 
+    int j; 
+    outer: 
+    for (i=1;i <3;i++) 
+        inner: 
+         for(j=1; j<3; j++) { 
+                    if (j==2) 
+                    continue outer; 
+                    System.out.println("Value for i=" + i + " Value for j=" +j); 
+                    } 
+        } 
+}
+A. Value for i=1 value for j=1 
+B. Value for i=2 value for j=1 
+C. Value for i=2 value for j=2 
+D. Value for i=3 value for j=1 
+
+ANSWER:A,B
+
+Q. What code placed after the comment //For loop would populate the elements of the array ia[] with values of the variable i.? 
+
+public class Lin{
+public static void main(String argv[]){
+        Lin l = new Lin();
+        l.amethod(); 
+        }
+        public void amethod(){
+        int ia[] = new int[4];
+                        //Start For loop        
+                        {
+           ia[i]=i;
+           System.out.println(ia[i]);
+           }
+        }
+}
+A. for(int i=0; i < ia.length() -1; i++) 
+B. for (int i=0; i< ia.length(); i++) 
+C. for(int i=1; i < 4; i++) 
+D. for(int i=0; i< ia.length;i++) 
+
+ANSWER:D
+
+Q. How many objects are eligible for garbage collection once execution has reached the line labeled Line A?
+
+String name;
+String newName = "Nick";
+newName = "Jason";
+name = "Frieda";
+
+String newestName = name;
+
+name = null;
+//Line A
+
+A. 0
+B. 1
+C. 2
+D. 3
+E. 4
+
+ANSWER:B
+
+Q. Which of the following statements about Java's garbage collection are true?
+
+A. The garbage collector can be invoked explicitly using a Runtime object.
+B. The finalize method is always called before an object is garbage collected.
+C. Any class that includes a finalize method should invoke its superclass' finalize method.
+D. Garbage collection behavior is very predictable.
+
+ANSWER:A,B,C
+
+Q. You are concerned that your program may attempt to use more memory than is available. To avoid this situation you want to ensure that the Java Virtual Machine will run its garbage collection just before you start a complex routine. What can you do to be certain that garbage collection will run when you want . 
+A. You cannot be certain when garbage collection will run 
+B. Use the Runtime.gc() method to force garbage collection 
+C. Ensure that all the variables you require to be garbage collected are set to null 
+D. Use the System.gc() method to force garbage collection 
+
+ANSWER:A
+
+Q. Identify the position in the following program where the object, initially referenced with arg1, eligible for garbage collection.
+
+public class MyClass {
+    public static void main(String args[]) {
+        String msg;
+        String pre = "This program was called with";
+        String post = " as first argument.";
+        String arg1 = new String((args.length > 0) ? "'" + args[0] + "'": "<no argument>");
+
+        msg = arg1;
+        arg1 = null;        //(1)
+        msg = pre + msg+post;   //(2)
+        pre   = null;       //(3)
+
+        System.out.println(msg);
+
+        msg = null;         // (4)
+        post = null;            // (5)
+        args = null;            // (6)
+    }
+}
+
+A. After the line labeled (1)
+B. After the line labeled (2)
+C. After the line labeled (3)
+D. After the line labeled (4)
+E. After the line labeled (5)
+F. After the line labeled (6)
+
+ANSWER:B
+
+Q. Which of the following is the correct syntax for suggesting that the JVM performs garbage collection
+
+A. System.free();
+B. System.setGarbageCollection();
+C. System.out.gc();
+D. System.gc();
+
+ANSWER:D
+
+Q. Which of the following statements assigns "Hello Java" to the String variable s?
+
+A. String s = "Hello Java";
+B. String s[] = "Hello Java";
+C. new String s = "Hello Java";
+D. String s = new String("Hello Java");
+
+ANSWER:A,D
+
+Q. An integer, x has a binary value (using 1 bytE. of 10011100. What is the binary value of z after these statements: 
+
+int y = 1 << 7;
+int z = x & y; 
+
+
+A. 1000 0001
+B. 1000 0000
+C. 0000 0001
+D. 1001 1101
+E. 1001 1100
+
+ANSWER:B
+
+Q. Which of the following are legal identifiers 
+
+A. 2variable 
+B. variable2 
+C. _whatavariable 
+D. _3_ 
+E. $anothervar 
+F. #myvar 
+
+ANSWER:B,C,D,E
+
+Q. What will happen when you attempt to compile and run this code?
+
+public class MyMain{
+public static void main(String argv){
+        System.out.println("Hello cruel world");
+        }
+}
+
+A. The compiler will complain that main is a reserved word and cannot be used for a class
+B. The code will compile and when run will print out "Hello cruel world"
+C. The code will compile but will complain at run time that no constructor is defined
+D. The code will compile but will complain at run time that main is not correctly defined
+
+ANSWER:D
+
+Q. What will happen when you attempt to compile and run the following code
+
+public class MyAr{
+public static void main(String argv[]) {
+        MyAr m = new MyAr();
+        m.amethod();
+        }
+        public void amethod(){
+        static int i;
+        System.out.println(i);
+        }
+}
+A. Compilation and output of the value 0
+B.Compile time error because i has not been initialized
+C. Compilation and output of null
+D. Compile time error
+
+ANSWER:D
+
+Q. The following code will give 
+
+1:     Byte b1 = new Byte("127");
+2:
+3:     if(b1.toString() == b1.toString())
+4:        System.out.println("True");
+5:    else
+6:        System.out.println("False");
+
+A. Compilation error, toString() is not avialable for Byte.
+B. Prints "True".
+C. Prints "False".
+
+ANSWER:C
+
+Q. What is the output for the following lines of code?
+1:  System.out.println(" " +2 + 3); 
+2:  System.out.println(2 + 3); 
+3:  System.out.println(2 + 3 +"");
+4:  System.out.println(2 + "" +3); 
+
+ 
+A. Compilation error at line 3
+B. Prints 23, 5, 5 and 23.
+C. Prints 5, 5, 5 and 23.
+D. Prints 23, 5, 23 and 23.
+ 
+ANSWER:B
+
+Q. If arr[] contains only positive integer values, what does this function do?
+
+public int guessWhat( int arr[] )
+{  int x= 0;
+   for( int i = 0; i < arr.length; i++ )
+      x = x < arr[i] ? arr[i] : x;
+   return x;
+}
+A. Returns the index of the highest element in the array
+B. Returns true/false if there are any elements that repeat in the array
+C. Returns how many even numbers are in the array
+D. Returns the highest element in the array
+E. Returns the number of question marks in the array
+
+ANSWER:D
+
+Q. Given the following code what will be output? 
+public class Pass{
+static int j=20;
+public static void main(String argv[]){
+        int i=10;
+        Pass p = new Pass();
+        p.amethod(i);
+        System.out.println(i);
+        System.out.println(j);
+        }
+        public void amethod(int x){
+        x=x*2;
+        j=j*2;
+        }
+}
+A. Error: amethod parameter does not match variable 
+B. 20 and 40 
+C. 10 and 40 
+D. 10, and 20 
+
+ANSWER:C
+
+Q. What will happen when you try compiling and running this code? 
+public class Ref{
+public static void main(String argv[]){
+          Ref r = new Ref();
+          r.amethod(r);
+          }
+          public void amethod(Ref r){
+          int i=99;
+          multi(r);
+          System.out.println(i);
+          }
+          public void multi(Ref r){
+          r.i = r.i*2;
+          }
+}
+A. Error at compile time 
+B. An output of 99 
+C. An output of 198 
+D. An error at runtime 
+
+ANSWER:A
+
+Q. What will happen when you attempt to compile and run the following code
+
+int Output=10;
+boolean b1 = false;
+if((b1==true) && ((Output+=10)==20)){
+    System.out.println("We are equal "+Output);
+    }else
+    {
+    System.out.println("Not equal! "+Output);
+}
+
+A. Compile error, attempting to peform binary comparison on logical data type
+B. Compilation and output of "We are equal 10"
+C. Compilation and output of "Not equal! 20"
+D. Compilation and output of "Not equal! 10"
+
+ANSWER:D
+
+Q. What will happen if you compile/run this code?
+
+1:    public class Q10
+2:    {
+3:      public static void main(String[] args)
+4:      {
+5:          int i = 10;
+6:          int j = 10;
+7:          boolean b = false;
+8:          
+9:          if( b = i == j)
+10:            System.out.println("True");
+11:         else
+12:        System.out.println("False");
+13: }
+14:    }
+
+A. Compilation error at line 9 .
+B. Runtime error exception at line 9.
+C. Prints "True".
+D. Prints "Fasle".
+
+ANSWER:C
+
+Q. Given the following code how could you invoke the Base constructor that will print out the string "base constructor"; 
+
+class Base{
+        Base(int i){
+        System.out.println("base constructor");
+        }
+        Base(){
+        }
+}
+public class Sup extends Base{
+        public static void main(String argv[]){
+             Sup s= new Sup();
+        //One
+        }
+        Sup()
+        {
+            //Two
+        }
+        public void derived()
+        {
+            //Three
+        }
+}
+A. On the line After //One put Base(10); 
+B. On the line After //One put super(10); 
+C. On the line After //Two put super(10); 
+D. On the line After //Three put super(10); 
+
+ANSWER:C
+
+Q. What will be the result when you try to compile and run the following code? 
+
+private class Base{
+Base(){
+     int i = 100;     
+     System.out.println(i);
+     }
+}
+public class Pri extends Base{
+static int i = 200;
+public static void main(String argv[]){
+        Pri p = new Pri();
+        System.out.println(i);
+        }
+}
+A. Error at compile time 
+B. 200 
+C. 100 followed by 200 
+D. 100 
+
+ANSWER:A
+
+Q. What will happen when you attempt to compile and run the following code 
+class Base{
+private void amethod(int iBase){
+        System.out.println("Base.amethod");
+        }
+}
+
+class Over extends Base{
+
+
+public static void main(String argv[]){
+        Over o = new Over();
+        int iBase=0;
+        o.amethod(iBase);
+        }
+        public void amethod(int iOver){
+                System.out.println("Over.amethod");
+        }
+
+}
+A. Compile time error complaining that Base.amethod is private 
+B. Runtime error complaining that Base.amethod is private 
+C. Output of Base.amethod 
+D. Output of Over.amethod() 
+  
+ANSWER:D
+
+Q. Given the folowing classes which of the following will compile without error?
+
+interface IFace{}
+class CFace implements IFace{}
+class Base{}
+
+public class ObRef extends Base{
+public static void main(String argv[]){
+        ObRef ob = new ObRef();
+        Base b = new Base();
+        Object o1 = new Object();
+        IFace o2 = new CFace();
+        }
+}
+
+A. o1=o2;
+B. b=ob;
+C. ob=b;
+D. o1=b;
+
+ANSWER:A,B,D
+
+Q. Given the following class definition, which of the following statements would be legal after the comment //Here
+
+class InOut{
+String s= new String("Between");
+
+
+        public void amethod(final int iArgs){
+        int iam;
+               class Bicycle{
+                        public void sayHello(){
+						//Here
+                        }//End of bicycle class
+                }
+        }//End of amethod
+       public void another(){
+       int iOther;
+       }
+}
+A. System.out.println(s); 
+B. System.out.println(iOther);
+C. System.out.println(iam);
+D. System.out.println(iArgs);
+
+
+ANSWER:A,D
+
+Q. Which of the following statements are true ?
+
+select all valid answers.
+
+A. No two methods can ever simultaneously execute synchronized methods on the same object.
+B. Methods declared synchronized should not be recursive, since the object's monitor will not allow simultaneous invocations of the method.
+C. Synchronized methods can only call other synchronized methods directly.
+D. Inside a synchronzied method, one can assume that no other threads are currently executing a method in the same class.
+
+ANSWER:A
+
+Q. When extending the Thread class to provide a thread's behavior, which methods should be overridden ?
+
+Select all valid answers.
+
+A. begin()
+B. start()
+C. run()
+D. resume()
+E. behavior()
+
+ANSWER:C
+
+Q. Which of the following statements are true ?
+
+Select all valid answers.
+
+A. The class Thread is abstract.
+B. The class Thread implements Runnable.
+C. Classes implementing the Runnable interface must define a method called start();
+D. Calling the method run() on an object implementing Runnable will produce a new thread.
+E. Programs terminate when the last non-daemon thread ends.
+
+ANSWER:B,E
+
+Q. What will happen when you attempt to compile and run the following code?
+
+public class Bground extends Thread{
+
+public static void main(String argv[]){
+	        Bground b = new Bground();
+        	b.run();
+        }
+        public void start(){
+        	for (int i = 0; i <10; i++){
+                	System.out.println("Value of i = " + i);
+                }
+        }
+
+}
+
+A. A compile time error indicating that no run method is defined for the Thread class
+B. A run time error indicating that no run method is defined for the Thread class
+C. Clean compile and at run time the values 0 to 9 are printed out
+D. Clean compile but no output at runtime
+
+ANSWER:D
+
+Q. Which of the following statements about threading are true
+
+A. You can only obtain a mutually exclusive lock on methods in a class that extends Thread or implements runnable
+B. You can obtain a mutually exclusive lock on any object
+C. A thread can obtain a mutex lock on a method declared with the keyword synchronized
+D. Thread scheduling algorithms are platform dependent
+
+ANSWER:B,C,D
+
+Q. The Container methods add( Component comp ) and add( String name, Component comp ) will throw an IllegalArgumentException if comp is a:
+
+A. button
+B. list
+C. window
+D. textarea
+E. container that contains this container
+
+ANSWER:C,E
+
+Q. Of the following AWT classes, which one(s) are responsible for implementing the components layout?
+
+A. LayoutManager
+B. GridBagLayout
+C. ActionListener
+D. WindowAdapter
+E. FlowLayout
+
+ANSWER:B,E
+
+Q. A component that should resize vertically but not horizontally should be placed in a:
+
+A. BorderLayout in the North or South location
+B. FlowLayout as the first component
+C. BorderLayout in the East or West location
+D. BorderLayout in the Center location
+E. GridLayout
+
+ANSWER:C
+
+Q. You have created an applet that draws lines. You have overriden the paint operation and used the graphics drawLine method, and increase one of its parameters to multiple lines across the screen. When you first test the applet you find that the news lines are redrawn, but the old lines are erased. How can you modify your code to allow the old lines to stay on the screen instead of being cleared. 
+A. Override repaint thus 
+
+public void repaint(Graphics g){ 
+    paint(g); 
+    }
+B.Override update thus 
+public void update(Graphics g) { 
+        paint(g); 
+        }
+C. turn off clearing with the method setClear(); 
+D. Remove the drawing from the paint Method and place in the calling code 
+
+ANSWER:B
+
+Q. What best describes the appearance of an application with the following code?
+
+import java.awt.*;
+
+public class FlowAp extends Frame{
+
+public static void main(String argv[]){
+    FlowAp fa=new FlowAp();
+    fa.setSize(400,300);
+    fa.setVisible(true);
+}
+FlowAp(){
+        add(new Button("One"));
+        add(new Button("Two"));
+        add(new Button("Three"));
+        add(new Button("Four"));
+    }//End of constructor
+
+}//End of Application
+A. A Frame with buttons marked One to Four placed on each edge.
+B. A Frame with buutons marked One to four running from the top to bottom
+C. A Frame with one large button marked Four in the Centre
+D. An Error at run time indicating you have not set a LayoutManager
+
+ANSWER:C
+
+Q. What will happen when you attempt to compile and run this code
+
+//Demonstration of event handling
+import java.awt.event.*;
+import java.awt.*;
+
+public class MyWc extends Frame implements WindowListener{
+public static void main(String argv[]){
+        MyWc mwc = new MyWc();
+        }
+        public void windowClosing(WindowEvent we){
+                System.exit(0);
+                }//End of windowClosing
+
+      public void  MyWc(){
+        setSize(300,300);
+        setVisible(true);
+        }
+}//End of class
+
+A. Error at compile time
+B. Visible Frame created that that can be closed
+C. Compilation but no output at run time
+D. Error at compile time because of comment before import statements
+
+ANSWER:A
+
+Q. Which of the following will output -4.0 
+
+A. System.out.println(Math.floor(-4.7)); 
+B. System.out.println(Math.round(-4.7)); 
+C. System.out.println(Math.ceil(-4.7)); 
+D. System.out.println(Math.Min(-4.7)); 
+
+ANSWER:C
+
+Q. If you run the code below, what gets printed out? 
+
+String s=new String("Bicycle"); 
+int iBegin=1; 
+char iEnd=3; 
+System.out.println(s.substring(iBegin,iEnd));
+
+A. Bic
+B. ic 
+C. icy 
+D. error: no method matching substring(int,char) 
+
+ANSWER:B
+
+Q. If you wanted to find out where the position of the letter v (ie return 2) in the string s 
+containing "Java", which of the following could you use? 
+A. mid(2,s); 
+B. charAt(2); 
+C. s.indexOf('v'); 
+D. indexOf(s,'v'); 
+
+ANSWER:C
+
+Q. What will be the result when you attempt to compile and run the following code?. 
+
+public class Conv{
+    public static void main(String argv[]){ 
+        Conv c=new Conv(); 
+        String s=new String("ello"); 
+        c.amethod(s); 
+    } 
+public void amethod(String s){ 
+    char c='H'; 
+    c+=s; 
+    System.out.println(c); 
+    } 
+}
+
+A. Compilation and output the string "Hello" 
+B. Compilation and output the string "ello" 
+C. Compilation and output the string elloH 
+D. Compile time error 
+
+ANSWER:D
+
+Q. What will be output by the following line?
+
+System.out.println(Math.floor(-2.1));
+A. -2
+B. 2.0
+C. -3
+D. -3.0
+
+ANSWER:D
+
+Q. What is the name of the interface used to represent collections that maintain non-unique elements in order ?
+
+Select all valid answers.
+
+A. Collection
+B. Set
+C. SortedSet
+D. List
+E. Sequence
+
+ANSWER:D
+
+Q. Which of these statements concerning the use of collection operations are true ?
+
+Select all valid answers.
+
+A. Some operations may throw an UnsupportedOperationException.
+B. Methods using some operations must either catch UnsupportedOperationException or declare that they throw such exceptions.
+C. Collection classes implementing List can have duplicate elements.
+D. ArrayList can only accomodate a fixed number of elements.
+E. The Collection interface contains a method named get.
+
+ANSWER:A,C
+
+Q. Which of these methods from the Collection interface return the value true if the collection object was modified during the operation ?
+
+Select all valid answers.
+
+A. contains()
+B. add()
+C. containsAll()
+D. retainAll()
+E. clear()
+
+ANSWER:B,D
+
+Q. Which of the following statements are true?
+
+A. At the root of the collection hierarchy is a class called Collection
+B. The collection interface contains a method called enumerator
+C. The interator method returns an instance of the Vector class
+D. The set interface is designed for unique elements
+
+ANSWER:D
+
+Q. What will happen if you compile/run the folowing lines of code? 
+1:  Vector a = new Vector();
+2:
+3:  a.addElement(10);
+4:
+5:  System.out.println(a.elementAt(0));
+ 
+ 
+A. Prints 10.
+B. Prints 11.
+C. Compilation error at line 3.
+D. Prints some garbage.
+ 
+ANSWER:C
+
+Q. A directory can be created using a method from the class(es):
+
+A. File
+B. DataOutput
+C. Directory
+D. FileDescriptor
+E. FileOutputStream
+
+ANSWER:A
+
+Q. Given the following code 
+import java.io.*;
+public class Th{
+        public static void main(String argv[]){
+        Th t = new Th();
+        t.amethod();
+        }
+        public void amethod(){
+                try{
+                ioCall();
+                }catch(IOException ioe){}
+        }
+        
+}
+What code would be most likely for the body of the ioCall method 
+A. public void ioCall ()throws IOException{
+        DataInputStream din = new DataInputStream(System.in);
+        din.readChar();
+        }
+B. public void ioCall ()throw IOException{
+        DataInputStream din = new DataInputStream(System.in);
+        din.readChar();
+        }
+C. public void ioCall (){
+        DataInputStream din = new DataInputStream(System.in);
+        din.readChar();
+        }
+D. public void ioCall throws IOException(){     
+   DataInputStream din = new DataInputStream(System.in);
+        din.readChar();
+        }
+
+ANSWER:A
+
+Q. Which of the following can you perform using the File class? 
+
+A. Change the current directory 
+B. Return the name of the parent directory 
+C. Delete a file 
+D. Find if a file contains text or binary information 
+
+ANSWER:B,C
+
+Q. You have these files in the same directory. What will happen when you attempt to compile and run Class1.java if you have not already compiled Base.java 
+
+//Base.java
+package Base;
+class Base{
+        protected void amethod(){
+                System.out.println("amethod");
+        }//End of amethod
+}//End of class base
+package Class1;
+//Class1.java
+public class Class1 extends Base{
+
+public static void main(String argv[]){
+                Base b = new Base();
+                b.amethod();
+               }//End of main
+}//End of Class1
+A. Compile Error: Methods in Base not found 
+B. Compile Error: Unable to access protected method in base class 
+C. Compilation followed by the output "amethod" 
+D. Compile error: Superclass Class1.Base of class Class1.Class1 not found 
+
+ANSWER:D
+
+Q. Which of the following will compile without error?
+
+A. File f = new File("/","autoexec.bat");
+B. DataInputStream d = new DataInputStream(System.in);
+C. OutputStreamWriter o = new OutputStreamWriter(System.out);
+D. RandomAccessFile r = new RandomAccessFile("OutFile");
+
+ANSWER:A,B,C
+

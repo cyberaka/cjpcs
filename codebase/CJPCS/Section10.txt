@@ -1,0 +1,194 @@
+Q. You need to create a class that will store a unique object elements. You do not need to sort these elements but they must be unique. 
+What interface might be most suitable to meet this need? 
+
+A.Set 
+B.List 
+C.Map 
+D.Vector 
+  
+ANSWER: A
+
+
+Q. Which of the following will successfully create an instance of the Vector class and add an element? 
+A. Vector v=new Vector(99); 
+v[1]=99; 
+  
+
+B. Vector v=new Vector(); 
+v.addElement(99); 
+  
+
+C. Vector v=new Vector(); 
+v.add(99); 
+  
+
+D. Vector v=new Vector(100); 
+v.addElement("99"); 
+
+ANSWER: D
+
+
+Q. Which of the following most closely describes a bitset collection? 
+A. A class that contains groups of unique sequences of bits 
+B. A method for flipping individual bits in instance of a primitive type 
+C. An array of boolean primitives that indicate zeros or ones 
+D. A collection for storing bits as on-off information, like a vector of bits 
+
+ANSWER: D
+
+
+Q. Which of these are core interfaces in the collection framework ?
+
+Select all valid answers.
+
+A. Set
+B. Bag
+C. LinkedList
+D. Collection
+E. Map
+
+ANSWER: A,B,E
+
+
+Q. Which of these implementations are provided by the java.util package ?
+
+Select all valid answers.
+
+A. HashList
+B. HashMap
+C. ArraySet
+D. ArrayMap
+E. TreeMap
+
+ANSWER: B,E
+
+
+Q. What is the name of the interface used to represent collections that maintain non-unique elements in order ?
+
+Select all valid answers.
+
+A. Collection
+B. Set
+C. SortedSet
+D. List
+E. Sequence
+
+ANSWER: D
+
+
+Q. Which of these statements concerning the use of collection operations are true ?
+
+Select all valid answers.
+
+A. Some operations may throw an UnsupportedOperationException.
+B. Methods using some operations must either catch UnsupportedOperationException or declare that they throw such exceptions.
+C. Collection classes implementing List can have duplicate elements.
+D. ArrayList can only accomodate a fixed number of elements.
+E. The Collection interface contains a method named get.
+
+ANSWER: A,C
+
+
+Q. Which of these methods from the Collection interface return the value true if the collection object was modified during the operation ?
+
+Select all valid answers.
+
+A. contains()
+B. add()
+C. containsAll()
+D. retainAll()
+E. clear()
+
+ANSWER: B,D
+
+
+Q. Which of these collection implementations are thread-safe ?
+
+Select all valid answers.
+
+A. ArrayList
+B. HashSet
+C. Vector
+D. TreeSet
+E. LinkedList
+
+ANSWER: C
+
+Q. Which of these classes has a comparator() method ?
+
+Select all valid answers.
+
+A. ArrayList
+B. HashMap
+C. TreeSet
+D. HashSet
+E. Treemap
+
+ANSWER: C,E
+
+
+Q. Which most closely matches a description of a Java Map?
+
+A. A vector of arrays for a 2D geographic representation
+B. A class for containing unique array elements
+C. A class for containing unique vector elements
+D. An interface that ensures that implementing classes cannot contain duplicate keys 
+
+ANSWER: D
+
+
+Q. How does the set collection deal with duplicate elements?
+
+A. An exception is thrown if you attempt to add an element with a duplicate value
+B. The add method returns false if you attempt to add an element with a duplicate value
+C. A set may contain elements that return duplicate values from a call to the equals method
+D. Duplicate values will cause an error at compile time
+
+ANSWER: B
+
+
+Q. Which of the following statements are true?
+
+A. At the root of the collection hierarchy is a class called Collection
+B. The collection interface contains a method called enumerator
+C. The interator method returns an instance of the Vector class
+D. The set interface is designed for unique elements
+
+ANSWER: D
+
+
+Q. Which of the following methods are members of the Vector class and allow you to input a new element
+
+A. addElement
+B. insert
+C. append
+D. addItem
+
+ANSWER: A
+
+
+Q. Which of the following are methods of the Collection interface?
+A. iterator
+B. isEmpty
+C. toArray
+D. setText
+
+ANSWER: A,B,C
+
+
+Q. What will happen if you compile/run the folowing lines of code? 
+1:  Vector a = new Vector();
+2:
+3:  a.addElement(10);
+4:
+5:  System.out.println(a.elementAt(0));
+ 
+ 
+A. Prints 10.
+B. Prints 11.
+C. Compilation error at line 3.
+D. Prints some garbage.
+ 
+ANSWER: C
+
+
